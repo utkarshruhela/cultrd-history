@@ -1,0 +1,4 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[41.9761,37.6841],[43.2945,35.6686],[46.5364,35.8478],[41.9761,37.6841]]]},"properties":{"NAME":"Hurrian Kingdoms","SUBJECTO":"Hurrian Kingdoms","PARTOF":"Hurrian Kingdoms","BORDERPRECISION":1,"LINK":null}},
+{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[46.3727,33.4976],[48.0547,31.8989],[49.2528,32.1041],[46.3727,33.4976]]]},"properties":{"NAME":"Elam","SUBJECTO":"Elam","PARTOF":"Elam","BORDERPRECISION":1,"LINK":null}}
+]}

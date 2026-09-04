@@ -1,0 +1,322 @@
+{
+  "slices": [
+    {
+      "year": -123000,
+      "key": "bc123000",
+      "featureCount": 0,
+      "bytes": 49
+    },
+    {
+      "year": -10000,
+      "key": "bc10000",
+      "featureCount": 0,
+      "bytes": 49
+    },
+    {
+      "year": -8000,
+      "key": "bc8000",
+      "featureCount": 0,
+      "bytes": 49
+    },
+    {
+      "year": -5000,
+      "key": "bc5000",
+      "featureCount": 2,
+      "bytes": 550
+    },
+    {
+      "year": -4000,
+      "key": "bc4000",
+      "featureCount": 7,
+      "bytes": 2305
+    },
+    {
+      "year": -3000,
+      "key": "bc3000",
+      "featureCount": 7,
+      "bytes": 2305
+    },
+    {
+      "year": -2000,
+      "key": "bc2000",
+      "featureCount": 9,
+      "bytes": 2899
+    },
+    {
+      "year": -1500,
+      "key": "bc1500",
+      "featureCount": 18,
+      "bytes": 7762
+    },
+    {
+      "year": -1000,
+      "key": "bc1000",
+      "featureCount": 18,
+      "bytes": 7762
+    },
+    {
+      "year": -700,
+      "key": "bc700",
+      "featureCount": 18,
+      "bytes": 7762
+    },
+    {
+      "year": -500,
+      "key": "bc500",
+      "featureCount": 29,
+      "bytes": 12399
+    },
+    {
+      "year": -400,
+      "key": "bc400",
+      "featureCount": 31,
+      "bytes": 14856
+    },
+    {
+      "year": -323,
+      "key": "bc323",
+      "featureCount": 32,
+      "bytes": 14019
+    },
+    {
+      "year": -300,
+      "key": "bc300",
+      "featureCount": 38,
+      "bytes": 15880
+    },
+    {
+      "year": -200,
+      "key": "bc200",
+      "featureCount": 46,
+      "bytes": 147414
+    },
+    {
+      "year": -100,
+      "key": "bc100",
+      "featureCount": 46,
+      "bytes": 85958
+    },
+    {
+      "year": -1,
+      "key": "bc1",
+      "featureCount": 44,
+      "bytes": 22511
+    },
+    {
+      "year": 100,
+      "key": "100",
+      "featureCount": 49,
+      "bytes": 24266
+    },
+    {
+      "year": 200,
+      "key": "200",
+      "featureCount": 43,
+      "bytes": 19406
+    },
+    {
+      "year": 300,
+      "key": "300",
+      "featureCount": 43,
+      "bytes": 20928
+    },
+    {
+      "year": 400,
+      "key": "400",
+      "featureCount": 52,
+      "bytes": 21993
+    },
+    {
+      "year": 500,
+      "key": "500",
+      "featureCount": 61,
+      "bytes": 28148
+    },
+    {
+      "year": 600,
+      "key": "600",
+      "featureCount": 64,
+      "bytes": 31510
+    },
+    {
+      "year": 700,
+      "key": "700",
+      "featureCount": 106,
+      "bytes": 146317
+    },
+    {
+      "year": 800,
+      "key": "800",
+      "featureCount": 96,
+      "bytes": 55151
+    },
+    {
+      "year": 900,
+      "key": "900",
+      "featureCount": 111,
+      "bytes": 63366
+    },
+    {
+      "year": 1000,
+      "key": "1000",
+      "featureCount": 109,
+      "bytes": 283008
+    },
+    {
+      "year": 1100,
+      "key": "1100",
+      "featureCount": 127,
+      "bytes": 269469
+    },
+    {
+      "year": 1200,
+      "key": "1200",
+      "featureCount": 107,
+      "bytes": 62825
+    },
+    {
+      "year": 1279,
+      "key": "1279",
+      "featureCount": 98,
+      "bytes": 314838
+    },
+    {
+      "year": 1300,
+      "key": "1300",
+      "featureCount": 97,
+      "bytes": 310896
+    },
+    {
+      "year": 1400,
+      "key": "1400",
+      "featureCount": 103,
+      "bytes": 360168
+    },
+    {
+      "year": 1492,
+      "key": "1492",
+      "featureCount": 1300,
+      "bytes": 1336105
+    },
+    {
+      "year": 1500,
+      "key": "1500",
+      "featureCount": 126,
+      "bytes": 379811
+    },
+    {
+      "year": 1530,
+      "key": "1530",
+      "featureCount": 265,
+      "bytes": 432007
+    },
+    {
+      "year": 1600,
+      "key": "1600",
+      "featureCount": 648,
+      "bytes": 740915
+    },
+    {
+      "year": 1650,
+      "key": "1650",
+      "featureCount": 587,
+      "bytes": 773336
+    },
+    {
+      "year": 1700,
+      "key": "1700",
+      "featureCount": 581,
+      "bytes": 758779
+    },
+    {
+      "year": 1715,
+      "key": "1715",
+      "featureCount": 597,
+      "bytes": 800426
+    },
+    {
+      "year": 1783,
+      "key": "1783",
+      "featureCount": 556,
+      "bytes": 372728
+    },
+    {
+      "year": 1800,
+      "key": "1800",
+      "featureCount": 553,
+      "bytes": 878457
+    },
+    {
+      "year": 1815,
+      "key": "1815",
+      "featureCount": 323,
+      "bytes": 245138
+    },
+    {
+      "year": 1880,
+      "key": "1880",
+      "featureCount": 173,
+      "bytes": 120571
+    },
+    {
+      "year": 1900,
+      "key": "1900",
+      "featureCount": 222,
+      "bytes": 133674
+    },
+    {
+      "year": 1914,
+      "key": "1914",
+      "featureCount": 144,
+      "bytes": 118647
+    },
+    {
+      "year": 1920,
+      "key": "1920",
+      "featureCount": 165,
+      "bytes": 138204
+    },
+    {
+      "year": 1930,
+      "key": "1930",
+      "featureCount": 163,
+      "bytes": 123263
+    },
+    {
+      "year": 1938,
+      "key": "1938",
+      "featureCount": 175,
+      "bytes": 698609
+    },
+    {
+      "year": 1945,
+      "key": "1945",
+      "featureCount": 185,
+      "bytes": 132447
+    },
+    {
+      "year": 1960,
+      "key": "1960",
+      "featureCount": 160,
+      "bytes": 1017060
+    },
+    {
+      "year": 1994,
+      "key": "1994",
+      "featureCount": 197,
+      "bytes": 1045285
+    },
+    {
+      "year": 2000,
+      "key": "2000",
+      "featureCount": 198,
+      "bytes": 1046003
+    },
+    {
+      "year": 2010,
+      "key": "2010",
+      "featureCount": 198,
+      "bytes": 1045994
+    }
+  ]
+}
