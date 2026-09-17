@@ -3,6 +3,21 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "wujing-zhengyi-tang",
+    title: "Correct Meaning of the Five Classics (Wujing Zhengyi)",
+    creator: "Kong Yingda and a team of court scholars",
+    domain: "philosophy",
+    discipline: "philosophy",
+    subForm: "imperially authorized classical commentaries",
+    yearStart: 653,
+    yearApprox: false,
+    civilizationId: "china_imperial",
+    description: "The Tang imperial edition brought together authorized interpretations of the Five Classics. Its Changes commentary incorporated earlier scholarship associated with Wang Bi. This entry dates the official edition, completed after Kong Yingda's death, rather than the much older classical texts themselves.",
+    sourceLink: "https://academics.hamilton.edu/asian_studies/home/culttemp/sitePages/canonbooks.html",
+    license: "Historical facts; original summary",
+    dataSource: "Hamilton College, Versions of the Confucian Canon; Stanford Encyclopedia of Philosophy, Chinese Philosophy of Change: https://plato.stanford.edu/entries/chinese-change/",
+  },
+  {
     id: "hagia-sophia-justinian",
     title: "Hagia Sophia: Justinian's domed church",
     creator: ["Anthemios of Tralles", "Isidoros of Miletus"],

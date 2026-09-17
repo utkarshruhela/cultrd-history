@@ -943,7 +943,7 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "china_imperial",
     description:
       "A divination manual built around 64 hexagrams, compiled during the Western Zhou period and later layered with philosophical commentary. One of the oldest Chinese classics and a lasting influence on Confucian and Daoist thought alike.",
-    sourceLink: "https://en.wikipedia.org/wiki/I_Ching",
+    sourceLink: "https://plato.stanford.edu/entries/chinese-change/",
     license: "Public domain (ancient text)",
     dataSource: "General Sinological consensus",
   },
