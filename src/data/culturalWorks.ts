@@ -156,6 +156,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 1900,
   },
   {
+    id: "latin_america_modern",
+    label: "Modern Latin America",
+    note: "A regional grouping for post-independence cultural and scientific work; pin is at Mexico City and does not claim a shared political history.",
+    lat: 19.43,
+    lon: -99.13,
+    yearStart: 1800,
+    yearEnd: 2026,
+  },
+  {
     id: "islamic_golden_age",
     label: "Islamic Golden Age",
     note: "Spanned Iberia to Central Asia under the Abbasid Caliphate; pin is at Baghdad, its intellectual center. Individual works below may be far from this point.",
