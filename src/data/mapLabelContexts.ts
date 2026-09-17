@@ -212,6 +212,27 @@ export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
     sourceLink: "https://www.doi.gov/oia/islands/virgin-islands",
     sourceLabel: "U.S. Department of the Interior, U.S. Virgin Islands",
   },
+  {
+    nameAliases: ["Martinique"],
+    title: "Martinique: a Caribbean island under changing French rule",
+    description: "Martinique has Indigenous Caribbean histories, French colonial settlement from 1635, a plantation economy built on slavery, abolition in 1848, and departmental status within France from 1946. A bare map label is neither one continuous sovereign state nor a substitute for the island's Arawak, Kalinago, African-descended, Indian, Chinese, and other community histories.",
+    sourceLink: "https://www.culture.gouv.fr/regions/dac-martinique/la-direction-des-affaires-culturelles-dac/la-martinique-en-bref",
+    sourceLabel: "French Ministry of Culture, La Martinique en bref",
+  },
+  {
+    nameAliases: ["Puerto Rico"],
+    title: "Puerto Rico: an island with colonial and territorial histories",
+    description: "Puerto Rico has Taíno and other Indigenous Caribbean histories, Spanish colonial rule from the early sixteenth century, and U.S. territorial status after 1898. The map label should not be read as a sovereign kingdom across every snapshot; San Juan's fortifications instead show changing military, maritime, and urban histories under Spanish and later U.S. administration.",
+    sourceLink: "https://www.nps.gov/saju/learn/historyculture/index.htm?mobile-app=true&theme=wiki",
+    sourceLabel: "U.S. National Park Service, San Juan National Historic Site",
+  },
+  {
+    nameAliases: ["Turks and Caicos Islands"],
+    title: "Turks and Caicos: a Lucayan archipelago and British Overseas Territory",
+    description: "Turks and Caicos has Lucayan and Taíno histories, later Bermudian salt-raking settlement, and shifting links to the Bahamas, Jamaica, and Britain. It remains a British Overseas Territory rather than an independent state; a generic label should be read through the snapshot's territorial administration, not as a continuous kingdom with a ruler list.",
+    sourceLink: "https://www.tcilondon.org.uk/the-islands/a-brief-history-of-the-islands/",
+    sourceLabel: "Turks and Caicos Islands Government, A Brief History of the Islands",
+  },
 ];
 
 const BY_NAME = new Map<string, MapLabelContext>();
