@@ -12,6 +12,8 @@ import type { PolityCulturalLink } from "../types";
  * honest empty state rather than inferred from a broad civilisation tag.
  */
 export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "imperial-japan-yamato-heian", culturalWorkId: "pillow-book", relationship: "produced", start: 1002, end: 1002, note: "Sei Shonagon's observations belong to Heian imperial court life; the approximate date is not evidence of a royal commission.", confidence: "high" },
+  { polityId: "japan-shogunate-era", culturalWorkId: "great-wave-off-kanagawa", relationship: "produced", start: 1830, end: 1832, note: "Hokusai's commercial woodblock print was produced during Tokugawa rule. This dates its artistic production, not sponsorship by the shogun.", confidence: "high" },
   { polityId: "qin-dynasty-221-206bce", culturalWorkId: "terracotta-army", relationship: "commissioned", start: -210, end: -210, note: "The funerary army belongs to Qin Shi Huang's mausoleum. The approximate date marks his burial; work on the larger complex began before imperial unification.", confidence: "high" },
   { polityId: "han-dynasty-206bce-220ce", culturalWorkId: "zhang-heng-seismoscope", relationship: "produced", start: 132, end: 132, note: "Zhang Heng's instrument belongs to the Eastern Han period; its mechanism is known through descriptions and later reconstructions.", confidence: "high" },
   { polityId: "han-dynasty-206bce-220ce", culturalWorkId: "cai-lun-papermaking", relationship: "produced", start: 105, end: 105, note: "Cai Lun's recorded presentation of improved paper took place at the Eastern Han court; earlier archaeological paper prevents treating him as its sole inventor.", confidence: "high" },

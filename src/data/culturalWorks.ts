@@ -1340,14 +1340,15 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     domain: "arts",
     discipline: "visual-art",
     subForm: "woodblock print (ukiyo-e)",
-    yearStart: 1831,
+    yearStart: 1830,
+    yearEnd: 1832,
     yearApprox: true,
     civilizationId: "japan_classical",
     description:
       "The best-known image from Hokusai's series \"Thirty-six Views of Mount Fuji,\" depicting boats caught beneath a towering cresting wave with Fuji small in the background. Printed in large numbers as affordable popular art, it later strongly influenced Western Impressionist and Post-Impressionist painters.",
-    sourceLink: "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
+    sourceLink: "https://www.metmuseum.org/art/collection/search/45434",
     license: "Public domain (print predates copyright; specific impressions vary by holding museum)",
-    dataSource: "General art-historical consensus",
+    dataSource: "Metropolitan Museum of Art, collection record 45434",
   },
   {
     id: "pillow-book",
@@ -1362,9 +1363,9 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "japan_classical",
     description:
       "A collection of lists, observations, and anecdotes by a court lady contemporary with Murasaki Shikibu, written in the loosely associative \"zuihitsu\" style. Prized for its wit and its vivid, informal window into Heian court life.",
-    sourceLink: "https://en.wikipedia.org/wiki/The_Pillow_Book",
+    sourceLink: "https://www.epiville.ccnmtl.columbia.edu/special/japan_600ce_pillowbook.htm",
     license: "Public domain (medieval text)",
-    dataSource: "General history-of-literature consensus",
+    dataSource: "Columbia University: excerpts from The Pillow Book, translated by Ivan Morris",
   },
 
   // --- Khmer Empire ---
