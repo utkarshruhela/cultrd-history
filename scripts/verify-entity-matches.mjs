@@ -129,6 +129,7 @@ const EXPECTED_STILL_ONGOING = new Set([
   "independent-belize",
   "commonwealth-of-dominica",
   "republic-of-senegal",
+  "republic-of-yemen",
 ]);
 const world = JSON.parse(fs.readFileSync("public/data/world.geojson", "utf8"));
 for (const feat of world.features) {

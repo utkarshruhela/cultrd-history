@@ -8,6 +8,35 @@ import type { PoliticalEntityProfile } from "../../types";
  */
 export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
   {
+    id: "qasimiyya-imamate-yemen",
+    nameAliases: ["Yemen"],
+    kind: "other",
+    periodStart: 1597,
+    periodEnd: 1872,
+    periodApprox: false,
+    description: "The Qasimiyya imamate established Zaydi rule over much of highland Yemen from 1597 and expelled the Ottomans from much of the region in the seventeenth century. Its authority varied sharply by region and declined before renewed Ottoman rule in 1872; this is not a profile for all of historical Yemen.",
+    rulers: [
+      { name: "al-Mansur al-Qasim", reignStart: 1597, reignEnd: 1620, note: "Founder of the Qasimiyya imamate" },
+      { name: "al-Mu'ayyad Muhammad", reignStart: 1620, reignEnd: 1644, note: "Imam during the expulsion of Ottoman forces from much of Yemen" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Encyclopaedia Britannica, Yemen",
+  },
+  {
+    id: "republic-of-yemen",
+    nameAliases: ["Yemen"],
+    kind: "republic",
+    periodStart: 1990,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "The Republic of Yemen was established in 1990 through the unification of the Yemen Arab Republic and the People's Democratic Republic of Yemen. Its territorial control and institutions have been heavily contested since the civil conflict that escalated in 2014; the card records the state framework, not an assertion of uncontested authority.",
+    rulers: [
+      { name: "Ali Abdullah Saleh", reignStart: 1990, reignEnd: 2012, note: "First president of unified Yemen" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Encyclopaedia Britannica, Yemen",
+  },
+  {
     id: "jolof-empire-senegambia",
     nameAliases: ["Senegal"],
     kind: "confederacy",
