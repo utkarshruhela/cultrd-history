@@ -9,6 +9,15 @@ import type { PolityCulturalLink } from "../types";
  * honest empty state rather than inferred from a broad civilisation tag.
  */
 export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  {
+    polityId: "timurid-empire",
+    culturalWorkId: "ulugh-beg-observatory",
+    relationship: "patronised",
+    start: 1420,
+    end: 1449,
+    note: "The astronomer-ruler Ulugh Beg sponsored Samarkand's observatory and its scholarly programme.",
+    confidence: "high",
+  },
   ...GLOBAL_CULTURAL_LINKS,
   ...ANCIENT_MEDITERRANEAN_LINKS,
   {
@@ -252,7 +261,11 @@ const WORK_BY_ID = new Map(CULTURAL_WORKS.map((work) => [work.id, work]));
 export function culturalWorksForPolity(polityId: string, year: number | null) {
   return POLITY_CULTURAL_LINKS.flatMap((link) => {
     if (link.polityId !== polityId) return [];
-    if (year !== null && (year < link.start || year > link.end)) return [];
+    // Achievements remain relevant after completion while the polity is
+    // selected; filtering out a completed observatory or building made the
+    // panel misleadingly empty in later snapshots. Future achievements stay
+    // hidden until their start date.
+    if (year !== null && year < link.start) return [];
     const work = WORK_BY_ID.get(link.culturalWorkId);
     return work ? [{ link, work }] : [];
   });

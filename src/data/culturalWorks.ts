@@ -226,11 +226,36 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearStart: 1945,
     yearEnd: 2026,
   },
+  {
+    id: "timurid_central_asia",
+    label: "Timurid Central Asia",
+    note: "Persianate courtly and scholarly networks centred on Samarkand and Herat; pin is at Samarkand.",
+    lat: 39.65,
+    lon: 66.96,
+    yearStart: 1370,
+    yearEnd: 1507,
+  },
 ];
 
 export const CULTURAL_WORKS: CulturalWork[] = [
   ...ANCIENT_MEDITERRANEAN_WORKS,
   ...MODERN_GLOBAL_WORKS,
+  {
+    id: "ulugh-beg-observatory",
+    title: "Ulugh Beg Observatory and Zij-i Sultani",
+    creator: "Ulugh Beg and the Samarkand astronomical school",
+    domain: "stem",
+    discipline: "astronomy-physics",
+    subForm: "observatory and star catalogue",
+    yearStart: 1420,
+    yearEnd: 1449,
+    yearApprox: true,
+    civilizationId: "timurid_central_asia",
+    description: "The Timurid ruler Ulugh Beg sponsored an observatory at Samarkand and an astronomical school whose star catalogue became one of the most accurate of its period.",
+    sourceLink: "https://whc.unesco.org/en/list/603/",
+    license: "Public domain (historical scientific work)",
+    dataSource: "UNESCO World Heritage Centre, Samarkand—Crossroad of Cultures",
+  },
   // --- Deccan Sultanates (Qutb Shahi Golconda/Hyderabad) ---
   {
     id: "golconda-fort",

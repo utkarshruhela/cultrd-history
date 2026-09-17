@@ -1564,7 +1564,10 @@ export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
   },
   {
     id: "timurid-empire",
-    nameAliases: ["Timurid Empire"],
+    // historical-basemaps labels the late, fragmented state "Timurid
+    // Emirates" in its 1492/1500 snapshots. It is the same curated
+    // Timurid polity, not a separate state.
+    nameAliases: ["Timurid Empire", "Timurid Emirates"],
     kind: "empire",
     periodStart: 1370,
     periodEnd: 1507,
