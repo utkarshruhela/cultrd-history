@@ -114,6 +114,27 @@ export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
     sourceLink: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000684031/",
     sourceLabel: "French law on Wallis and Futuna's 1961 status",
   },
+  {
+    nameAliases: ["Madagascar"],
+    title: "Madagascar: an island, not one continuous premodern state",
+    description: "Madagascar is an island with many distinct Malagasy polities, communities, and regional histories. The Merina kingdom expanded from the central highlands only in the late eighteenth and nineteenth centuries, while the independent republic dates from 1960; a country-shaped map label at other dates must be read as geographic shorthand rather than a timeless sovereign polity.",
+    sourceLink: "https://www.metmuseum.org/essays/kingdoms-of-madagascar-maroserana-and-merina",
+    sourceLabel: "The Metropolitan Museum of Art, Kingdoms of Madagascar: Maroserana and Merina",
+  },
+  {
+    nameAliases: ["Hadramaut"],
+    title: "Hadramawt: a South Arabian region",
+    description: "Hadramawt names a South Arabian region as well as an ancient kingdom. The ancient kingdom is separately curated where the snapshot fits its archaeological period; later polygons bearing the same name should be read as regional geography or later political configurations, not as a 1,000-year continuation of the ancient state.",
+    sourceLink: "https://www.britishmuseum.org/collection/galleries/ancient-south-arabia",
+    sourceLabel: "The British Museum, Ancient South Arabia galleries",
+  },
+  {
+    nameAliases: ["Expansionist Kingdom of Merina"],
+    title: "Merina expansion: a late historical period",
+    description: "The Merina monarchy developed in Madagascar's central highlands and expanded over much of the island in the nineteenth century. When this specific label appears on much earlier map snapshots, it is an anachronistic basemap category rather than evidence that the same kingdom ruled from the year shown; the date-bound Merina political card is used only for its actual period.",
+    sourceLink: "https://www.metmuseum.org/essays/kingdoms-of-madagascar-maroserana-and-merina",
+    sourceLabel: "The Metropolitan Museum of Art, Kingdoms of Madagascar: Maroserana and Merina",
+  },
 ];
 
 const BY_NAME = new Map<string, MapLabelContext>();
