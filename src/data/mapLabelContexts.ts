@@ -149,6 +149,27 @@ export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
     sourceLink: "https://whc.unesco.org/en/list/833/",
     sourceLabel: "UNESCO World Heritage Centre, Su Nuraxi di Barumini",
   },
+  {
+    nameAliases: ["Ceylon"],
+    title: "Ceylon: an historical island and colonial name",
+    description: "Ceylon was a long-used name for the island now called Sri Lanka, including Portuguese, Dutch, and British colonial periods and the dominion that became independent in 1948. A bare “Ceylon” map label does not identify one continuous sovereign polity and should not be used to flatten the island's diverse kingdoms, languages, and communities.",
+    sourceLink: "https://www.britannica.com/place/Sri-Lanka",
+    sourceLabel: "Encyclopaedia Britannica, Sri Lanka",
+  },
+  {
+    nameAliases: ["Dutch East Indies"],
+    title: "Dutch East Indies: a colonial administrative frame",
+    description: "The Dutch East Indies was a colonial administration encompassing many islands, peoples, kingdoms, and port societies in what is now largely Indonesia. It is not a single indigenous polity or a timeless name for Indonesia; the label should be read as a changing colonial framework with uneven territorial control.",
+    sourceLink: "https://www.nationaalarchief.nl/en/research/archives",
+    sourceLabel: "National Archives of the Netherlands, colonial archives research",
+  },
+  {
+    nameAliases: ["Rapa Nui"],
+    title: "Rapa Nui: an island and living Indigenous culture",
+    description: "Rapa Nui refers to the island and its Indigenous people, whose history includes the creation of moai landscapes, changing local social orders, Chilean annexation, and ongoing community stewardship. It is not a single centralized kingdom for every map snapshot, so a cultural and historical context is more accurate than a fabricated ruler list.",
+    sourceLink: "https://whc.unesco.org/en/list/715/",
+    sourceLabel: "UNESCO World Heritage Centre, Rapa Nui National Park",
+  },
 ];
 
 const BY_NAME = new Map<string, MapLabelContext>();
