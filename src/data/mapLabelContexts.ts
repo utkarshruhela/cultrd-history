@@ -3,6 +3,34 @@ import type { MapLabelContext } from "../types";
 /** Context cards intentionally do not masquerade as political-entity profiles. */
 export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
   {
+    nameAliases: ["Armenia"],
+    title: "Armenia: a highland region with changing states and diasporas",
+    description: "Armenia is a historical and cultural region whose boundaries, political institutions, and communities have changed repeatedly. A map label may refer to medieval kingdoms, imperial provinces, the Soviet republic, or the modern Republic of Armenia; it cannot safely be treated as one uninterrupted state. Armenian architectural and manuscript traditions also extend beyond present-day borders.",
+    sourceLink: "https://whc.unesco.org/en/list/960",
+    sourceLabel: "UNESCO World Heritage Centre, Monastery of Geghard and the Upper Azat Valley",
+  },
+  {
+    nameAliases: ["Mongolia"],
+    title: "Mongolia: steppe societies and changing political forms",
+    description: "Mongolia's map label can refer to the Mongol Empire, Qing-era Outer Mongolia, the twentieth-century Mongolian People's Republic, or the contemporary state. These are distinct political arrangements; pastoral knowledge, sacred landscapes, and musical traditions cannot be reduced to the borders or rulers of any one of them.",
+    sourceLink: "https://whc.unesco.org/en/list/1440",
+    sourceLabel: "UNESCO World Heritage Centre, Great Burkhan Khaldun Mountain and its surrounding sacred landscape",
+  },
+  {
+    nameAliases: ["New Zealand"],
+    title: "Aotearoa New Zealand: Māori and changing colonial-state frameworks",
+    description: "Aotearoa New Zealand has deep Māori histories, including distinct iwi and hapū relationships to land and sea, as well as colonial and later state institutions. A modern country label on an early-twentieth-century map is not a substitute for these histories or for the changing constitutional relationship with the United Kingdom.",
+    sourceLink: "https://whc.unesco.org/en/list/421",
+    sourceLabel: "UNESCO World Heritage Centre, Tongariro National Park",
+  },
+  {
+    nameAliases: ["Portuguese Guinea"],
+    title: "Portuguese Guinea: a colonial map label",
+    description: "Portuguese Guinea was a colonial administrative name applied to a territory whose peoples and polities predated Portuguese control. The label should not erase Balanta, Fula, Mandinka, Papel, Manjak, Bijagó, and other communities, nor describe colonial administration as a sovereign local kingdom. Guinea-Bissau achieved internationally recognized independence in 1974.",
+    sourceLink: "https://www.un.org/dppa/decolonization/en/nsgt/guinea-bissau",
+    sourceLabel: "United Nations, Guinea-Bissau decolonization history",
+  },
+  {
     nameAliases: ["Cyprus"],
     title: "Cyprus: an island across changing political orders",
     description: "Cyprus has been governed through changing Byzantine, Lusignan, Venetian, Ottoman, and British systems, alongside its own Greek- and Turkish-Cypriot communities and other histories. A country-shaped label in a medieval snapshot cannot truthfully supply one continuous sovereign state or ruler list; the island's layered settlement and architecture require period-specific interpretation.",
