@@ -1398,8 +1398,8 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     yearApprox: true,
     civilizationId: "khmer_empire",
     description:
-      "The state temple at the center of Angkor Thom, famous for 216 large serene stone faces carved into its towers, generally thought to combine the image of the bodhisattva Avalokiteshvara with that of the king himself. Its outer galleries also carry extensive narrative relief carvings of both mythic and everyday scenes.",
-    sourceLink: "https://en.wikipedia.org/wiki/Bayon",
+      "Jayavarman VII's Buddhist temple at the center of Angkor Thom is known for its monumental face-towers. The faces have been interpreted as Avalokiteshvara or the king, but their identity remains debated. Gallery reliefs portray warfare, religious practice, and everyday activities in Angkorian society.",
+    sourceLink: "https://apsaraauthority.gov.kh/2024/08/31/the-bas-reliefs-at-bayon-temple/",
     license: "Public domain (historic monument)",
     dataSource: "UNESCO World Heritage records; APSARA National Authority",
   },

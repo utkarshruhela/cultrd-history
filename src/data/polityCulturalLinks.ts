@@ -12,6 +12,8 @@ import type { PolityCulturalLink } from "../types";
  * honest empty state rather than inferred from a broad civilisation tag.
  */
 export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "khmer-empire", culturalWorkId: "bayon-faces", relationship: "commissioned", start: 1181, end: 1220, note: "Bayon's construction belongs to Jayavarman VII's Angkorian building programme. The approximate span describes the late twelfth- and early thirteenth-century temple, not a securely dated carving of every face.", confidence: "high" },
+  { polityId: "khmer-empire-map-cambodia", culturalWorkId: "bayon-faces", relationship: "commissioned", start: 1181, end: 1220, note: "The Cambodia map label denotes Angkorian rule in this profile; Jayavarman VII's Bayon belongs to the same Khmer polity, not the modern Cambodian state.", confidence: "high" },
   { polityId: "imperial-japan-yamato-heian", culturalWorkId: "pillow-book", relationship: "produced", start: 1002, end: 1002, note: "Sei Shonagon's observations belong to Heian imperial court life; the approximate date is not evidence of a royal commission.", confidence: "high" },
   { polityId: "japan-shogunate-era", culturalWorkId: "great-wave-off-kanagawa", relationship: "produced", start: 1830, end: 1832, note: "Hokusai's commercial woodblock print was produced during Tokugawa rule. This dates its artistic production, not sponsorship by the shogun.", confidence: "high" },
   { polityId: "qin-dynasty-221-206bce", culturalWorkId: "terracotta-army", relationship: "commissioned", start: -210, end: -210, note: "The funerary army belongs to Qin Shi Huang's mausoleum. The approximate date marks his burial; work on the larger complex began before imperial unification.", confidence: "high" },
