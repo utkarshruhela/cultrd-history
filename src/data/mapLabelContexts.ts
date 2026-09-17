@@ -3,6 +3,34 @@ import type { MapLabelContext } from "../types";
 /** Context cards intentionally do not masquerade as political-entity profiles. */
 export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
   {
+    nameAliases: ["Papua New Guinea"],
+    title: "Papua New Guinea: a modern state and many older societies",
+    description: "Papua New Guinea became independent in 1975, but the country-shaped label appears on maps long before that state existed. New Guinea and its islands hold hundreds of distinct societies, languages, and political histories; pre-independence polygons must not be read as a continuous Papua New Guinean state.",
+    sourceLink: "https://www.naa.gov.au/help-your-research/fact-sheets/independence-papua-new-guinea",
+    sourceLabel: "National Archives of Australia, independence of Papua New Guinea",
+  },
+  {
+    nameAliases: ["Bhutan"],
+    title: "Bhutan: premodern dual system and modern kingdom",
+    description: "Bhutan's unified state developed under the Zhabdrung's seventeenth-century dual system of temporal and spiritual authority. The hereditary Wangchuck monarchy began in 1907 and the constitutional transition in 2008; earlier country-shaped labels should not be read as a single uninterrupted modern kingdom.",
+    sourceLink: "https://www.mfa.gov.bt/rbedelhi/bhutan-at-glance/history/",
+    sourceLabel: "Ministry of Foreign Affairs, Bhutan, history overview",
+  },
+  {
+    nameAliases: ["Cochin China"],
+    title: "Cochin China: a changing European and colonial label",
+    description: "“Cochin China” was used by Europeans with varying geographic scope and later designated French Cochinchina, the colony centred on southern Vietnam from 1862 to 1945. It is not a single indigenous polity across all snapshots; earlier uses need to be interpreted through the specific Vietnamese and regional political context.",
+    sourceLink: "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dindochine/presence-francaise-indochine",
+    sourceLabel: "French Ministry of Armed Forces, French presence in Indochina",
+  },
+  {
+    nameAliases: ["Darfur"],
+    title: "Darfur: region and changing sultanates",
+    description: "Darfur is a region with multiple political histories, including a Fur sultanate established around the turn of the seventeenth century, Egyptian conquest in 1874, restoration after 1898, and British annexation in 1916. A regional map label should not erase Fur and other communities or imply one continuous state.",
+    sourceLink: "https://tile.loc.gov/storage-services/master/frd/frdcstdy/su/sudancountrystud00berry/sudancountrystud00berry.pdf",
+    sourceLabel: "Library of Congress, Sudan: a country study",
+  },
+  {
     nameAliases: ["Arawaks", "Arawak"],
     title: "Arawakan peoples and languages",
     description: "Arawak is an umbrella term with shifting historical use, applied to Indigenous peoples and languages across northern South America and the Caribbean. It does not name one unified state or tribe; a broad polygon must be read as cultural-linguistic geography rather than a ruler's territory.",
