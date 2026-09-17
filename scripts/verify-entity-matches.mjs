@@ -120,6 +120,7 @@ const EXPECTED_STILL_ONGOING = new Set([
   "kingdom-of-norway-continuity",
   "netherlands-republic-and-kingdom",
   "republic-of-haiti",
+  "second-and-modern-polish-republic",
 ]);
 const world = JSON.parse(fs.readFileSync("public/data/world.geojson", "utf8"));
 for (const feat of world.features) {

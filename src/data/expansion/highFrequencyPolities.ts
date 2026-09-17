@@ -8,6 +8,50 @@ import type { PoliticalEntityProfile } from "../../types";
  */
 export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
   {
+    id: "bagratid-kingdom-armenia",
+    nameAliases: ["Armenia"],
+    kind: "kingdom",
+    periodStart: 885,
+    periodEnd: 1045,
+    periodApprox: false,
+    description: "The Bagratid dynasty restored an Armenian kingdom in 885, with Ani becoming a major political and cultural centre. The kingdom was abolished by Byzantium in 1045; this profile avoids treating later Armenian communities or the modern republic as a continuation of the medieval state.",
+    rulers: [
+      { name: "Ashot I", reignStart: 885, reignEnd: 890, note: "Founder of the restored Armenian kingdom" },
+      { name: "Gagik I", reignStart: 989, reignEnd: 1020, note: "King during Ani's political and cultural high point" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Armenian Museum of America, Bagratid Armenia",
+  },
+  {
+    id: "duchy-of-warsaw-poland",
+    nameAliases: ["Poland"],
+    kind: "other",
+    periodStart: 1807,
+    periodEnd: 1815,
+    periodApprox: false,
+    description: "Napoleon created the Duchy of Warsaw in 1807 from Prussian partition territory. It was a French client state under Frederick Augustus of Saxony, not the restoration of the former Polish–Lithuanian Commonwealth, and was replaced at the Congress of Vienna.",
+    rulers: [
+      { name: "Frederick Augustus I", reignStart: 1807, reignEnd: 1815, note: "Duke of Warsaw and King of Saxony" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "University of Maria Curie-Skłodowska Press, A History of Poland in Outline",
+  },
+  {
+    id: "second-and-modern-polish-republic",
+    nameAliases: ["Poland"],
+    kind: "republic",
+    periodStart: 1918,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "Poland re-emerged as an independent republic in 1918 after more than a century of partition. The state then endured occupation, postwar communist rule, and democratic transition; the profile does not treat the interwar, People's Republic, and Third Republic as identical systems.",
+    rulers: [
+      { name: "Józef Piłsudski", reignStart: 1918, reignEnd: 1922, note: "Chief of State during the restoration of independence" },
+      { name: "Lech Wałęsa", reignStart: 1990, reignEnd: 1995, note: "First elected president of the post-communist Third Republic" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "University of Maria Curie-Skłodowska Press, A History of Poland in Outline; Encyclopaedia Britannica, Poland",
+  },
+  {
     id: "ottoman-cyprus",
     nameAliases: ["Cyprus"],
     kind: "other",
