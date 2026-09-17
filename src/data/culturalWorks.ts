@@ -111,6 +111,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 1912,
   },
   {
+    id: "korea_historical",
+    label: "Historical Korea",
+    note: "A peninsula-wide cultural grouping spanning successive Korean states; pin is at Kaesong and is not a territorial claim.",
+    lat: 37.97,
+    lon: 126.55,
+    yearStart: -57,
+    yearEnd: 1910,
+  },
+  {
     id: "islamic_golden_age",
     label: "Islamic Golden Age",
     note: "Spanned Iberia to Central Asia under the Abbasid Caliphate; pin is at Baghdad, its intellectual center. Individual works below may be far from this point.",

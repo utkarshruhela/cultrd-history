@@ -8,6 +8,32 @@ import type { PoliticalEntityProfile } from "../../types";
  */
 export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
   {
+    id: "hadramawt-ancient-kingdom",
+    nameAliases: ["Hadramaut"],
+    kind: "kingdom",
+    periodStart: -800,
+    periodEnd: 300,
+    periodApprox: true,
+    description: "Hadramawt was an ancient South Arabian kingdom associated with the Wadi Hadramawt and the incense trade. Its surviving inscriptions and archaeological evidence describe one kingdom among several South Arabian polities; later map uses of Hadramaut name a region, not a continuation of this state.",
+    rulers: [],
+    license: "Public domain (historical facts)",
+    dataSource: "The British Museum, Ancient South Arabia galleries",
+  },
+  {
+    id: "independent-papua-new-guinea",
+    nameAliases: ["Papua New Guinea"],
+    kind: "other",
+    periodStart: 1975,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "Papua New Guinea became independent in 1975 after Australian administration of the combined Territory of Papua and New Guinea. The profile refers to the independent state only and does not compress the island's many long-standing societies or its colonial periods into a pre-1975 national polity.",
+    rulers: [
+      { name: "Michael Somare", reignStart: 1975, reignEnd: 1980, note: "First prime minister after independence" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Papua New Guinea Department of Foreign Affairs, PNG History",
+  },
+  {
     id: "tibetan-empire",
     nameAliases: ["Tibet"],
     kind: "empire",

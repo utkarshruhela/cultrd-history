@@ -1239,11 +1239,14 @@ export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
   },
   {
     id: "goryeo-dynasty-korea",
-    nameAliases: ["Goryeo"],
+    nameAliases: ["Goryeo", "Korea"],
     kind: "dynasty",
     periodStart: 918,
-    periodEnd: 1392,
-    periodApprox: false,
+    // The succession occurred in 1392. End this record at 1391 so the
+    // year-granular matcher can distinguish it from Joseon without claiming
+    // both ruled the same snapshot year.
+    periodEnd: 1391,
+    periodApprox: true,
     description:
       "Founded in 918 by the warlord Wang Geon (Taejo), who reunified the peninsula's warring Later Three Kingdoms by 936, Goryeo gave Korea its modern English name. The dynasty built a centralized bureaucracy modeled on Tang and Song China, adopted Buddhism as a unifying state religion, and produced masterworks like the Tripitaka Koreana and celadon pottery. It weathered Khitan invasions and later became a tributary state of the Mongol Empire, before General Yi Seong-gye deposed the last king, Gongyang, and founded the Joseon dynasty in 1392.",
     rulers: [

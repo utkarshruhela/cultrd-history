@@ -115,6 +115,7 @@ const EXPECTED_STILL_ONGOING = new Set([
   "republic-of-egypt",
   "republic-of-madagascar",
   "american-samoa-us-territory",
+  "independent-papua-new-guinea",
 ]);
 const world = JSON.parse(fs.readFileSync("public/data/world.geojson", "utf8"));
 for (const feat of world.features) {

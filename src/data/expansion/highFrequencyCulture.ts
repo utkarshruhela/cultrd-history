@@ -3,6 +3,23 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "goryeo-celadon",
+    title: "Goryeo celadon and inlay technique",
+    creator: null,
+    attribution: "Goryeo ceramic workshops",
+    domain: "arts",
+    discipline: "visual-art",
+    subForm: "glazed ceramic and inlaid decoration",
+    yearStart: 1100,
+    yearEnd: 1250,
+    yearApprox: true,
+    civilizationId: "korea_historical",
+    description: "Goryeo potters developed celebrated green-glazed celadon, including inlaid decoration known as sanggam. The regional context represents historical Korea, while the panel connection supplies the specific polity context.",
+    sourceLink: "https://www.metmuseum.org/toah/hd/eakm/hd_eakm.htm",
+    license: "Public domain historical ceramics; catalogue facts",
+    dataSource: "The Metropolitan Museum of Art, Korean art in the Goryeo period.",
+  },
+  {
     id: "eiffel-tower",
     title: "Eiffel Tower",
     creator: ["Maurice Koechlin", "Émile Nouguier", "Gustave Eiffel's company"],
@@ -138,6 +155,7 @@ export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
 ];
 
 export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "goryeo-dynasty-korea", culturalWorkId: "goryeo-celadon", relationship: "produced", start: 1100, end: 1250, note: "Goryeo workshops developed refined celadon and the inlay technique associated with the dynasty's ceramic culture.", confidence: "high" },
   { polityId: "modern-french-republic", culturalWorkId: "eiffel-tower", relationship: "produced", start: 1887, end: 1889, note: "The Third Republic hosted the 1889 Exposition Universelle for which Eiffel's company constructed the tower.", confidence: "high" },
   { polityId: "khedivate-sultanate-kingdom-egypt", culturalWorkId: "suez-canal-construction", relationship: "produced", start: 1859, end: 1869, note: "Canal construction took place under Khedive Sa'id and Khedive Isma'il; this link records the Egyptian setting and labour, not exclusive national authorship.", confidence: "high" },
   { polityId: "spain-bourbon-and-modern-state", culturalWorkId: "guernica-picasso", relationship: "commissioned", start: 1937, end: 1937, note: "The Spanish Republican government commissioned Guernica for its pavilion at the 1937 Paris exposition.", confidence: "high" },
