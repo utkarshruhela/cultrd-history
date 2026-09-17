@@ -894,4 +894,19 @@ export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
     license: "Public domain (historical facts)",
     dataSource: "Encyclopaedia Britannica, Peru; Nobel Prize, Mario Vargas Llosa",
   },
+  {
+    id: "republic-of-guatemala-modern-state",
+    nameAliases: ["Guatemala"],
+    kind: "republic",
+    periodStart: 1839,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "Guatemala became an independent republic after the breakup of the Federal Republic of Central America in 1839. Its subsequent history includes liberal reform, authoritarian governments, a long internal armed conflict and genocide against Maya communities, the 1996 peace accords, and ongoing democratic struggle. The profile does not treat the present state as a replacement for the many Maya and other Indigenous histories of the region.",
+    rulers: [
+      { name: "Justo Rufino Barrios", reignStart: 1873, reignEnd: 1885, note: "Liberal reform president" },
+      { name: "Juan José Arévalo", reignStart: 1945, reignEnd: 1951, note: "President during Guatemala's democratic spring" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Encyclopaedia Britannica, Guatemala; Nobel Prize, Miguel Ángel Asturias",
+  },
 ];
