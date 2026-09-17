@@ -39,6 +39,15 @@ import { HIGH_FREQUENCY_CULTURAL_WORKS } from "./expansion/highFrequencyCulture"
 
 export const CIVILIZATIONS: CivilizationRegion[] = [
   {
+    id: "byzantine_world",
+    label: "Byzantine / Eastern Roman world",
+    note: "Constantinople represents a wider network of Eastern Roman artistic and scholarly centres.",
+    lat: 41.008,
+    lon: 28.98,
+    yearStart: 330,
+    yearEnd: 1453,
+  },
+  {
     id: "mesopotamia",
     label: "Mesopotamia (Sumer, Akkad, Babylon)",
     note: "Tigris-Euphrates river valley; pin is roughly at Babylon.",

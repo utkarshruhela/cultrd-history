@@ -3,6 +3,23 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "hagia-sophia-justinian",
+    title: "Hagia Sophia: Justinian's domed church",
+    creator: ["Anthemios of Tralles", "Isidoros of Miletus"],
+    attribution: "Commissioned by Justinian I; constructed by imperial building workshops",
+    domain: "arts",
+    discipline: "architecture",
+    subForm: "domed monumental church",
+    yearStart: 532,
+    yearEnd: 537,
+    yearApprox: false,
+    civilizationId: "byzantine_world",
+    description: "Built in Constantinople under Justinian I, Hagia Sophia joined an immense domed interior with the ceremonial functions of an imperial church. Its design influenced later churches and mosques. This entry dates the sixth-century construction; later mosaics, structural repairs, and changes of religious use belong to subsequent phases.",
+    sourceLink: "https://whc.unesco.org/en/list/356",
+    license: "Historical monument; original summary",
+    dataSource: "UNESCO World Heritage Centre, Historic Areas of Istanbul, criteria (i) and (ii).",
+  },
+  {
     id: "persepolis-palace-complex",
     title: "Persepolis: terraces, columned halls, and reliefs",
     creator: null,
@@ -1541,6 +1558,7 @@ export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
 ];
 
 export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "byzantine-empire", culturalWorkId: "hagia-sophia-justinian", relationship: "commissioned", start: 532, end: 537, note: "Justinian I commissioned the church in the Eastern Roman capital; the dates describe its initial construction rather than every surviving feature.", confidence: "high" },
   { polityId: "achaemenid-empire", culturalWorkId: "persepolis-palace-complex", relationship: "commissioned", start: -518, end: -424, note: "Darius I began the terrace; Xerxes I and Artaxerxes I continued the royal building programme, drawing on craftspeople and architectural traditions across the empire.", confidence: "high" },
   { polityId: "republic-of-venice", culturalWorkId: "gabrieli-sacrae-symphoniae", relationship: "produced", start: 1597, end: 1597, note: "Gabrieli served at San Marco in the Venetian Republic; this collection records the city's ecclesiastical and instrumental musical culture.", confidence: "high" },
   { polityId: "kingdom-of-sweden-continuity", culturalWorkId: "vasa-shipbuilding", relationship: "commissioned", start: 1626, end: 1628, note: "Gustav II Adolf commissioned Vasa in 1625; this link dates its construction and records its failure as part of engineering history.", confidence: "high" },
