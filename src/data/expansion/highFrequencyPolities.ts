@@ -1837,6 +1837,22 @@ export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
     dataSource: "United Nations decolonization records; UNESCO World Heritage Centre, Memorial sites of the Genocide",
   },
   {
+    id: "aceh-sultanate",
+    nameAliases: ["Aceh"],
+    kind: "sultanate",
+    periodStart: 1511,
+    periodEnd: 1903,
+    periodApprox: true,
+    description: "The Aceh Sultanate emerged in the early sixteenth century in northern Sumatra and became a major Indian Ocean polity. It reached a high point under Iskandar Muda, then faced changing regional and colonial pressures before the last sultan's surrender during the Aceh War in 1903. Earlier map labels for Aceh refer to a region with other states and are not treated as this sultanate.",
+    rulers: [
+      { name: "Ali Mughayat Syah", reignStart: 1511, reignEnd: 1530, reignApprox: true, note: "Early sixteenth-century founder of the Aceh Sultanate" },
+      { name: "Iskandar Muda", reignStart: 1607, reignEnd: 1636, note: "Ruler during Aceh's major seventeenth-century expansion" },
+      { name: "Muhammad Daud Syah", reignStart: 1874, reignEnd: 1903, note: "Last sultan; surrendered during the Dutch Aceh War" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "UNESCO, Hikayat Aceh; ANU Open Research, Aceh history; Cambridge University Press, Aceh War history",
+  },
+  {
     id: "pahlavi-iran",
     nameAliases: ["Iran"],
     kind: "dynasty",

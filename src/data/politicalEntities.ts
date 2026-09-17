@@ -2603,7 +2603,7 @@ export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
   },
   {
     id: "qing-dynasty",
-    nameAliases: ["Qing Empire"],
+    nameAliases: ["Qing Empire", "Manchu Empire"],
     kind: "empire",
     periodStart: 1636,
     periodEnd: 1912,
@@ -2899,7 +2899,7 @@ export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
   },
   {
     id: "chakri-dynasty-siam",
-    nameAliases: ["Siam"],
+    nameAliases: ["Siam", "Rattanakosin Kingdom"],
     kind: "kingdom",
     periodStart: 1782,
     periodEnd: 2026,
