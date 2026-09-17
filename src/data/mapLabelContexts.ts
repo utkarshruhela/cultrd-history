@@ -191,6 +191,27 @@ export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
     sourceLink: "https://www.nas.gov.sg/archivesonline/data/pdfdoc/lky19600119a.pdf",
     sourceLabel: "National Archives of Singapore, historical record on Malaya and regional colonial boundaries",
   },
+  {
+    nameAliases: ["French Guiana"],
+    title: "French Guiana: a French overseas territory with layered histories",
+    description: "French Guiana is not a continuous sovereign kingdom. It has Indigenous histories, colonial settlement and enslavement, the history of the penal colony, and since 1946 the status of a French overseas department. The map label should therefore be read as a territorial and administrative frame whose meaning changes by snapshot, not as a single independent polity.",
+    sourceLink: "https://www.outre-mer.gouv.fr/territoires/guyane",
+    sourceLabel: "French Ministry for Overseas Territories, Guyane",
+  },
+  {
+    nameAliases: ["Niue"],
+    title: "Niue: self-government in free association",
+    description: "Niue is a Polynesian island society whose political relationship with New Zealand has changed over time. It has been self-governing in free association with New Zealand since 1974, with its own Assembly and Cabinet. A broad map label cannot truthfully stand for one continuous sovereign state across earlier Indigenous, missionary, British-protectorate, and New Zealand-administration histories.",
+    sourceLink: "https://gov.nu/government",
+    sourceLabel: "Government of Niue, Government and Political System",
+  },
+  {
+    nameAliases: ["United States Virgin Islands"],
+    title: "U.S. Virgin Islands: a U.S. territory, not an independent kingdom",
+    description: "The U.S. Virgin Islands are a U.S. territory whose Danish colonial period ended with the 1917 transfer to the United States. The islands' histories also include Indigenous Caribbean communities, plantation slavery, and distinct local political development. Their map polygon should be interpreted through the period's governing relationship rather than as a continuous sovereign state.",
+    sourceLink: "https://www.doi.gov/oia/islands/virgin-islands",
+    sourceLabel: "U.S. Department of the Interior, U.S. Virgin Islands",
+  },
 ];
 
 const BY_NAME = new Map<string, MapLabelContext>();
