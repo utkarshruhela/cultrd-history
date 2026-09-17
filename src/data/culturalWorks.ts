@@ -156,6 +156,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 1900,
   },
   {
+    id: "equatorial_africa",
+    label: "Equatorial Africa",
+    note: "A regional context for diverse communities and historical societies across the rainforest zone; the pin is an orientation point, not a cultural capital.",
+    lat: 1.0,
+    lon: 10.0,
+    yearStart: -1000,
+    yearEnd: 2026,
+  },
+  {
     id: "latin_america_modern",
     label: "Modern Latin America",
     note: "A regional grouping for post-independence cultural and scientific work; pin is at Mexico City and does not claim a shared political history.",
