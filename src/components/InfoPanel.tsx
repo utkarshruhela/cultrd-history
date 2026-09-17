@@ -57,7 +57,7 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
   if (!selected) {
     return (
       <div className="info-panel info-panel-empty">
-        <p>Click a region on the map to see who ruled it.</p>
+        <p>Select a region to discover its history.</p>
         <p className="info-panel-note">
           Colors are per ruling power (consistent across space and time), from{" "}
           <a href="https://github.com/aourednik/historical-basemaps" target="_blank" rel="noreferrer">

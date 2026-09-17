@@ -26,7 +26,7 @@ export default function App() {
           <h1>history<em>flow</em></h1>
         </div>
         <div className="app-context">
-          <span className="app-tagline">WHO RULED WHOM, WHERE</span>
+          <span className="app-tagline">EXPLORE THE WORLD ACROSS TIME</span>
           <span className="app-instruction">CLICK THE MAP / SCRUB THE TIMELINE</span>
         </div>
         {activeSliceYear !== null && (
