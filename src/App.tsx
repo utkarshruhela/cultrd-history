@@ -16,14 +16,14 @@ export default function App() {
       <nav className="site-nav" aria-label="Site navigation">
         <a className="site-mark" href="https://www.utkarshruhela.com/" aria-label="Utkarsh Ruhela, home">UTK</a>
         <a className="site-section" href="https://www.utkarshruhela.com/">HOME</a>
-        <span className="site-current">HISTORY</span>
+        <span className="site-current">HISTORYFLOW</span>
         <span className="site-status">ARCHIVE_002</span>
       </nav>
 
       <header className="app-header">
         <div className="app-title-block">
           <span className="app-kicker">PERSONAL_ARCHIVE / CULTURAL_ATLAS</span>
-          <h1>CULTRD <em>HISTORY</em></h1>
+          <h1>history<em>flow</em></h1>
         </div>
         <div className="app-context">
           <span className="app-tagline">WHO RULED WHOM, WHERE</span>

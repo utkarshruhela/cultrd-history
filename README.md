@@ -1,11 +1,11 @@
-# CULTRD HISTORY
+# historyflow
 
 *(working title; the codebase/directory is still named `history-portal` — a fuller rename can
 follow once the cultural-works layer below is wired into the UI.)*
 
 An interactive history portal: a clickable world map + a scrollable timeline (4000 BCE → 2026)
 showing who ruled what, where, at any point in time — and, in progress, what literature, art, and
-architecture the world was producing at the same time. See "CULTRD HISTORY: cultural works" below
+architecture the world was producing at the same time. See "historyflow: cultural works" below
 for the new layer.
 
 ## What's in this version
@@ -136,7 +136,7 @@ semi-legendary, or non-script (quipu) respectively by current mainstream scholar
 are all defensible-but-arguable calls, not settled fact — see "Data roadmap" for tightening this
 up.
 
-## CULTRD HISTORY: cultural works
+## historyflow: cultural works
 
 A new layer, in progress, covering what literature, visual art, and architecture each
 civilization/tradition produced — not yet wired into the map UI, but the schema and a pilot

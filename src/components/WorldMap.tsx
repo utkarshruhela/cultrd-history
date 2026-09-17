@@ -235,9 +235,9 @@ export default function WorldMap({ currentYear, selectedName, onSelect, onActive
   return (
     <div className="world-map">
       <MapContainer
-        center={[20, 15]}
-        zoom={2.4}
-        minZoom={2}
+        center={[10, 0]}
+        zoom={1.5}
+        minZoom={0.75}
         maxZoom={7}
         worldCopyJump
         className="leaflet-container-full"
