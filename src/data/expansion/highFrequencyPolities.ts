@@ -631,11 +631,13 @@ export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
     periodApprox: false,
     description: "Fiji was ceded to Britain in 1874 and administered as a colony until independence in 1970. The later state has passed through constitutional change, coups, and republic status; this record makes that colonial-to-independent transition explicit rather than presenting the recurring map label as an unchanged kingdom.",
     rulers: [
-      { name: "Ratu Sir Kamisese Mara", reignStart: 1970, reignEnd: 1992, note: "First prime minister after independence" },
-      { name: "Ratu Sir Penaia Ganilau", reignStart: 1970, reignEnd: 1993, note: "Governor-General, then first president of the republic" },
+      { name: "Ratu Sir Kamisese Mara", reignStart: 1970, reignEnd: 1987, note: "First prime minister after independence; this term ended in April 1987" },
+      { name: "Ratu Sir Kamisese Mara", reignStart: 1987, reignEnd: 1992, note: "Returned as prime minister in December 1987, following the coups" },
+      { name: "Ratu Sir Penaia Ganilau", reignStart: 1983, reignEnd: 1987, note: "Governor-General from February 1983 to October 1987" },
+      { name: "Ratu Sir Penaia Ganilau", reignStart: 1987, reignEnd: 1993, note: "First president of the republic, from December 1987 until his death" },
     ],
     license: "Public domain (historical facts)",
-    dataSource: "Fiji Ministry of Foreign Affairs, History; UK National Archives, colonial administration records",
+    dataSource: "National Library of New Zealand, Ganilau authority record: https://natlib.govt.nz/records/22542982 ; Australian Prime Minister's tribute to Mara (2004), separate prime-ministerial terms: https://pmtranscripts.pmc.gov.au/release/transcript-21213 ; Fiji Ministry of Foreign Affairs, History",
   },
   {
     id: "al-busaid-sultanate-oman",
