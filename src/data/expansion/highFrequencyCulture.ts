@@ -3,6 +3,23 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "persepolis-palace-complex",
+    title: "Persepolis: terraces, columned halls, and reliefs",
+    creator: null,
+    attribution: "Builders and craftspeople under Darius I, Xerxes I, and Artaxerxes I",
+    domain: "arts",
+    discipline: "architecture",
+    subForm: "royal palace complex and monumental stone construction",
+    yearStart: -518,
+    yearEnd: -424,
+    yearApprox: true,
+    civilizationId: "achaemenid_persia",
+    description: "Beginning around 518 BCE, successive Achaemenid rulers developed Persepolis on a vast terrace combining the hillside with constructed platforms. Columned audience halls, stairways, and carved delegations expressed imperial authority through architectural and artistic traditions drawn from across the empire. The date range represents major building phases, not a single completion date.",
+    sourceLink: "https://whc.unesco.org/en/list/114",
+    license: "Historical monument; original summary",
+    dataSource: "UNESCO World Heritage Centre, Persepolis, Outstanding Universal Value statement.",
+  },
+  {
     id: "gabrieli-sacrae-symphoniae",
     title: "Sacrae symphoniae: music for separated ensembles",
     creator: "Giovanni Gabrieli",
@@ -1524,6 +1541,7 @@ export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
 ];
 
 export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "achaemenid-empire", culturalWorkId: "persepolis-palace-complex", relationship: "commissioned", start: -518, end: -424, note: "Darius I began the terrace; Xerxes I and Artaxerxes I continued the royal building programme, drawing on craftspeople and architectural traditions across the empire.", confidence: "high" },
   { polityId: "republic-of-venice", culturalWorkId: "gabrieli-sacrae-symphoniae", relationship: "produced", start: 1597, end: 1597, note: "Gabrieli served at San Marco in the Venetian Republic; this collection records the city's ecclesiastical and instrumental musical culture.", confidence: "high" },
   { polityId: "kingdom-of-sweden-continuity", culturalWorkId: "vasa-shipbuilding", relationship: "commissioned", start: 1626, end: 1628, note: "Gustav II Adolf commissioned Vasa in 1625; this link dates its construction and records its failure as part of engineering history.", confidence: "high" },
   { polityId: "kingdom-of-sweden-continuity", culturalWorkId: "linnaeus-species-plantarum", relationship: "produced", start: 1753, end: 1753, note: "The Swedish botanist's publication belongs to Sweden's eighteenth-century scholarly setting and international botanical networks; no royal commission is asserted.", confidence: "high" },

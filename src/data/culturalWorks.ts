@@ -192,6 +192,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 1922,
   },
   {
+    id: "achaemenid_persia",
+    label: "Achaemenid Persian world",
+    note: "Persepolis is a representative location for works made across a culturally diverse empire.",
+    lat: 29.935,
+    lon: 52.891,
+    yearStart: -550,
+    yearEnd: -330,
+  },
+  {
     id: "maya",
     label: "Maya civilization",
     note: "Many city-states across the Yucatan and Guatemala; pin is at Chichen Itza.",
