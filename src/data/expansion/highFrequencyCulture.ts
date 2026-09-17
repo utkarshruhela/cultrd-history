@@ -217,6 +217,23 @@ export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
     license: "Archaeological sites and public-domain historical facts",
     dataSource: "Soba Archaeological Project, University of Warsaw; British Museum, Sudan, Egypt and Nubia galleries.",
   },
+  {
+    id: "lunda-courtly-art-and-regalia",
+    title: "Lunda courtly art and regalia",
+    creator: null,
+    attribution: "Lunda, Chokwe, Ovimbundu, and other Central African court artists",
+    domain: "arts",
+    discipline: "visual-art",
+    subForm: "courtly sculpture, staffs, seats, and chiefly insignia",
+    yearStart: 1600,
+    yearEnd: 1890,
+    yearApprox: true,
+    civilizationId: "central_africa_courts",
+    description: "Lunda rulers and allied chiefs commissioned carved staffs, figures, and other insignia that expressed rank, ancestry, and political authority. These forms travelled through a network of courtly exchange and artistic adaptation, so the work credits Central African makers instead of collapsing the tradition into a single ruler's taste.",
+    sourceLink: "https://www.metmuseum.org/essays/kingdoms-of-the-savanna-the-luba-and-lunda-empires",
+    license: "Museum collection documentation and public-domain historical facts",
+    dataSource: "The Metropolitan Museum of Art, Kingdoms of the Savanna: The Luba and Lunda Empires.",
+  },
 ];
 
 export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
@@ -239,4 +256,5 @@ export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
   { polityId: "united-states-of-america", culturalWorkId: "transcontinental-railroad", relationship: "produced", start: 1863, end: 1869, note: "Federal legislation and U.S. chartered companies enabled the railroad; the panel note retains the central role of migrant labour.", confidence: "high" },
   { polityId: "makuria-medieval-nubia", culturalWorkId: "medieval-nubian-churches-and-soba", relationship: "produced", start: 600, end: 1500, note: "Churches and cathedral centres are central material evidence for Makuria's Christian artistic and urban culture; this link is regional rather than a claim of a named royal commission.", confidence: "medium" },
   { polityId: "alodia-alwa-medieval-nubia", culturalWorkId: "medieval-nubian-churches-and-soba", relationship: "produced", start: 600, end: 1500, note: "Soba was Alwa's capital and the archaeological project documents the city and its Christian material culture; individual patronage is not securely known.", confidence: "high" },
+  { polityId: "lunda-empire-central-africa", culturalWorkId: "lunda-courtly-art-and-regalia", relationship: "produced", start: 1600, end: 1890, note: "Lunda rulers and client courts patronised forms of chiefly art and insignia, including traditions adapted through relationships with Luba and Chokwe makers.", confidence: "high" },
 ];

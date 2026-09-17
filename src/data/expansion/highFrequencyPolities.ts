@@ -790,4 +790,18 @@ export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
     license: "Public domain (historical facts)",
     dataSource: "Soba Archaeological Project, University of Warsaw; University of Chicago ISAC, Medieval Nubia",
   },
+  {
+    id: "lunda-empire-central-africa",
+    nameAliases: ["Lunda"],
+    kind: "empire",
+    periodStart: 1600,
+    periodEnd: 1890,
+    periodApprox: true,
+    description: "The Lunda state developed in the seventeenth century in Central Africa and extended influence through alliances, client states, trade, and war across areas now divided among Angola, the Democratic Republic of the Congo, and Zambia. Its court drew on and reshaped Luba models of sacred kingship while maintaining a distinct political tradition. This broad profile follows the historical map label rather than projecting a modern national border onto the Lunda world.",
+    rulers: [
+      { name: "Mwaant Yaav Naweej", reignStart: 1650, reignApprox: true, note: "Ruler associated with opening trade from the Lunda capital toward the Atlantic coast" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "The Metropolitan Museum of Art, Kingdoms of the Savanna: The Luba and Lunda Empires",
+  },
 ];

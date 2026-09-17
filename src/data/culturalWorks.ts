@@ -147,6 +147,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 1500,
   },
   {
+    id: "central_africa_courts",
+    label: "Central African court cultures",
+    note: "A regional grouping for Luba, Lunda, and related courtly traditions; pin is near the historical Lunda capital region, not a border claim.",
+    lat: -8.5,
+    lon: 22.5,
+    yearStart: 1550,
+    yearEnd: 1900,
+  },
+  {
     id: "islamic_golden_age",
     label: "Islamic Golden Age",
     note: "Spanned Iberia to Central Asia under the Abbasid Caliphate; pin is at Baghdad, its intellectual center. Individual works below may be far from this point.",
