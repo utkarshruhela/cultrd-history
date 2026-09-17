@@ -3,6 +3,23 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "ivrea-olivetti-industrial-city",
+    title: "Ivrea: Olivetti's industrial city",
+    creator: null,
+    attribution: "Adriano Olivetti, collaborating architects, planners, engineers, and workers",
+    domain: "arts",
+    discipline: "architecture",
+    subForm: "industrial architecture, housing, and social infrastructure",
+    yearStart: 1930,
+    yearEnd: 1969,
+    yearApprox: true,
+    civilizationId: "modern_europe",
+    description: "Ivrea's factories, housing, and social-service buildings developed around Olivetti's production of typewriters, calculators, and computers. Designed mainly from the 1930s through the 1960s, the ensemble connected modern architecture with ideas about workers' welfare and community life, spanning both the monarchy and the postwar republic.",
+    sourceLink: "https://whc.unesco.org/en/list/1538",
+    license: "Historical facts; original summary",
+    dataSource: "UNESCO World Heritage Centre, Ivrea, industrial city of the 20th century; dates approximate the documented principal development decades.",
+  },
+  {
     id: "fasil-ghebbi-gondar",
     title: "Fasil Ghebbi: Gondar's royal and civic architecture",
     creator: null,
@@ -1460,6 +1477,8 @@ export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
 ];
 
 export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "kingdom-of-italy-1861-1946", culturalWorkId: "ivrea-olivetti-industrial-city", relationship: "produced", start: 1930, end: 1946, note: "Ivrea's early modern industrial development took place during the kingdom; the project was corporate and architectural rather than a royal commission.", confidence: "high" },
+  { polityId: "italian-republic", culturalWorkId: "ivrea-olivetti-industrial-city", relationship: "produced", start: 1946, end: 1969, note: "Postwar construction continued Olivetti's industrial and social project; this link credits production during the republic without asserting government authorship.", confidence: "high" },
   { polityId: "solomonic-dynasty-kingdom-of-ethiopia", culturalWorkId: "fasil-ghebbi-gondar", relationship: "commissioned", start: 1636, end: 1750, note: "Fasilides and succeeding Ethiopian rulers commissioned the capital's royal and religious buildings over multiple generations.", confidence: "high" },
   { polityId: "solomonic-dynasty-kingdom-of-ethiopia", culturalWorkId: "kebra-nagast-solomonic-tradition", relationship: "produced", start: 1300, end: 1400, note: "The text articulates the dynasty's sacred genealogy in the fourteenth-century Ethiopian setting; its compilation date is approximate and no specific royal commission is asserted.", confidence: "medium" },
   { polityId: "solomonic-dynasty-kingdom-of-ethiopia", culturalWorkId: "ezra-ethiopian-inlaid-cross", relationship: "produced", start: 1500, end: 1500, note: "The work belongs to monastic artistic production in the Ethiopian highlands during the Solomonic period; this association does not imply royal patronage of the Stephanite order.", confidence: "medium" },

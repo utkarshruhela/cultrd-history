@@ -8,6 +8,20 @@ import type { PoliticalEntityProfile } from "../../types";
  */
 export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
   {
+    id: "italian-republic",
+    nameAliases: ["Italy"],
+    kind: "republic",
+    periodStart: 1946,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "Italy became a republic following the institutional referendum of June 1946. The Constituent Assembly elected Enrico De Nicola provisional head of state, and the republican constitution entered into force in 1948. This profile covers the postwar republic, following the Kingdom of Italy and the defeat of Fascism.",
+    rulers: [
+      { name: "Enrico De Nicola", reignStart: 1946, reignEnd: 1948, note: "Provisional head of state, then first president under the republican constitution" },
+    ],
+    license: "Historical facts; original summary",
+    dataSource: "Presidency of the Italian Republic, Enrico De Nicola election record: https://presidenti.quirinale.it/page/1/den-elezione.html; presidential historical archives.",
+  },
+  {
     id: "qasimiyya-imamate-yemen",
     nameAliases: ["Yemen"],
     kind: "other",

@@ -105,6 +105,7 @@ for (const [name, years] of occurrences) {
 // convention -- where a modern-map match is the CORRECT, intended result,
 // not a bug.
 const EXPECTED_STILL_ONGOING = new Set([
+  "italian-republic",
   "kingdom-of-bhutan-wangchuck-dynasty",
   "kingdom-of-sweden-continuity",
   "kingdom-of-denmark-continuity",
