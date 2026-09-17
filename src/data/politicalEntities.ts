@@ -3099,17 +3099,24 @@ export function findPoliticalEntity(name: string | null, activeSliceYear: number
   const candidates = exact ?? BY_CANONICAL_NAME.get(canonicalName(name)) ?? [];
   if (candidates.length === 0) return undefined;
 
-  const matchesYear = (entity: PoliticalEntityProfile) => {
-    if (activeSliceYear === null) return entity.periodEnd >= new Date().getFullYear();
-    return activeSliceYear >= entity.periodStart - MATCH_BUFFER_YEARS && activeSliceYear <= entity.periodEnd + MATCH_BUFFER_YEARS;
-  };
-  const matching = candidates.filter(matchesYear);
+  if (activeSliceYear === null) {
+    const current = candidates.filter((entity) => entity.periodEnd >= new Date().getFullYear());
+    return current.length === 1 ? current[0] : undefined;
+  }
+  // Prefer a profile whose documented interval actually contains the
+  // snapshot. The buffer is only a fallback for coarse historical slices;
+  // otherwise adjacent successor states sharing a label (e.g. France or
+  // Portugal) would both match for sixty years and produce an empty panel.
+  const exactPeriod = candidates.filter(
+    (entity) => activeSliceYear >= entity.periodStart && activeSliceYear <= entity.periodEnd,
+  );
+  if (exactPeriod.length === 1) return exactPeriod[0];
+  if (exactPeriod.length > 1) return undefined;
+  const matching = candidates.filter(
+    (entity) => activeSliceYear >= entity.periodStart - MATCH_BUFFER_YEARS && activeSliceYear <= entity.periodEnd + MATCH_BUFFER_YEARS,
+  );
   // A canonical form may reasonably refer to more than one historic state.
   // Fail closed unless the active snapshot disambiguates one profile.
   if (matching.length !== 1) return undefined;
-  const entity = matching[0];
-  if (activeSliceYear === null) {
-    return entity;
-  }
-  return entity;
+  return matching[0];
 }
