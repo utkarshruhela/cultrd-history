@@ -23,6 +23,27 @@ export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
     sourceLink: "https://www.britannica.com/place/Hainan",
     sourceLabel: "Encyclopaedia Britannica, Hainan",
   },
+  {
+    nameAliases: ["Thule"],
+    title: "Thule: an archaeological culture",
+    description: "Thule is an archaeological term for Inuit ancestral communities and traditions that spread across Arctic North America. It is not the name of a kingdom; its history is reconstructed from material culture, oral knowledge, environmental change, and relationships among Arctic peoples.",
+    sourceLink: "https://naturalhistory.si.edu/education/teaching-resources/anthropology-and-social-studies/arctic-lands-and-peoples",
+    sourceLabel: "Smithsonian National Museum of Natural History, Arctic Lands and Peoples",
+  },
+  {
+    nameAliases: ["Athabaskan"],
+    title: "Athabaskan: a language-family label",
+    description: "Athabaskan is primarily a linguistic classification encompassing many distinct Indigenous peoples and languages across northern North America. It does not identify one state, one ruler, or a single shared territorial boundary, so the map label requires cultural rather than dynastic interpretation.",
+    sourceLink: "https://www150.statcan.gc.ca/n1/pub/41-20-0002/412000022025003-eng.htm",
+    sourceLabel: "Statistics Canada, Indigenous Language Families: Athabaskan languages",
+  },
+  {
+    nameAliases: ["Shuar"],
+    title: "Shuar: Indigenous communities of the Upper Amazon",
+    description: "Shuar refers to Indigenous communities with their own social, linguistic, and territorial histories in the Upper Amazon. It is not a single centralized kingdom; a polygon carrying this label should not be read as a dynastic or modern national border.",
+    sourceLink: "https://www.usfq.edu.ec/es/proyectos/tsantsas-museos-y-responsabilidad-social-una-propuesta-conjunta-y-participativa-con-la",
+    sourceLabel: "Universidad San Francisco de Quito, Shuar collaborative research",
+  },
 ];
 
 const BY_NAME = new Map<string, MapLabelContext>();
