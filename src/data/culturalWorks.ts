@@ -35,6 +35,7 @@
 import type { CivilizationRegion, CulturalWork } from "../types";
 import { ANCIENT_MEDITERRANEAN_WORKS } from "./expansion/ancientMediterranean";
 import { MODERN_GLOBAL_WORKS } from "./expansion/modernGlobal";
+import { HIGH_FREQUENCY_CULTURAL_WORKS } from "./expansion/highFrequencyCulture";
 
 export const CIVILIZATIONS: CivilizationRegion[] = [
   {
@@ -235,11 +236,57 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearStart: 1370,
     yearEnd: 1507,
   },
+  {
+    id: "tibetan_himalayan",
+    label: "Tibetan & Himalayan worlds",
+    note: "A highland cultural region linking Tibetan, Himalayan, Indian, Nepalese, Chinese, and Central Asian traditions; pin is at Lhasa.",
+    lat: 29.65,
+    lon: 91.17,
+    yearStart: 600,
+    yearEnd: 2026,
+  },
+  {
+    id: "south_arabia",
+    label: "Ancient South Arabia",
+    note: "An archaeological and epigraphic regional grouping around Yemen and the incense routes; pin is at Ma'rib.",
+    lat: 15.47,
+    lon: 45.33,
+    yearStart: -800,
+    yearEnd: 600,
+  },
+  {
+    id: "polynesian_oceania",
+    label: "Polynesian Oceania",
+    note: "A connected oceanic cultural sphere; pin is at Tongatapu and is not a territorial boundary.",
+    lat: -21.18,
+    lon: -175.2,
+    yearStart: 800,
+    yearEnd: 2026,
+  },
+  {
+    id: "philippine_archipelago",
+    label: "Philippine archipelago",
+    note: "An archipelagic grouping with many local societies and maritime connections; pin is at Manila.",
+    lat: 14.6,
+    lon: 120.98,
+    yearStart: 900,
+    yearEnd: 2026,
+  },
+  {
+    id: "north_america_modern",
+    label: "Modern North America",
+    note: "A modern regional grouping used for institutions and infrastructure; it does not stand for a single culture or polity.",
+    lat: 38.9,
+    lon: -77.04,
+    yearStart: 1776,
+    yearEnd: 2026,
+  },
 ];
 
 export const CULTURAL_WORKS: CulturalWork[] = [
   ...ANCIENT_MEDITERRANEAN_WORKS,
   ...MODERN_GLOBAL_WORKS,
+  ...HIGH_FREQUENCY_CULTURAL_WORKS,
   {
     id: "ulugh-beg-observatory",
     title: "Ulugh Beg Observatory and Zij-i Sultani",

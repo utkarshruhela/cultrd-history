@@ -1,6 +1,7 @@
 import { CULTURAL_WORKS } from "./culturalWorks";
 import { GLOBAL_CULTURAL_LINKS } from "./expansion/globalLinks";
 import { ANCIENT_MEDITERRANEAN_LINKS } from "./expansion/ancientMediterranean";
+import { HIGH_FREQUENCY_CULTURAL_LINKS } from "./expansion/highFrequencyCulture";
 import type { PolityCulturalLink } from "../types";
 
 /**
@@ -20,6 +21,7 @@ export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
   },
   ...GLOBAL_CULTURAL_LINKS,
   ...ANCIENT_MEDITERRANEAN_LINKS,
+  ...HIGH_FREQUENCY_CULTURAL_LINKS,
   {
     polityId: "ancient-egypt",
     culturalWorkId: "instruction-of-ptahhotep",
