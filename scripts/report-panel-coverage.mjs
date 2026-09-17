@@ -1,4 +1,4 @@
-// Reports actual historical-map name/slice coverage, sorted by the number of
+// Reports historical-map and modern-endpoint coverage, sorted by the number of
 // feature occurrences that still fall back to an uncatalogued map panel.
 // This is deliberately a report, not a pass/fail gate: labels such as
 // “Polynesians” are valid cultural-region contexts rather than missing states.
@@ -32,16 +32,26 @@ const initial = available.filter((slice) => slice.year <= TIMELINE_MIN_YEAR).at(
 const reachable = available.filter((slice) => slice === initial ||
   (slice.year > TIMELINE_MIN_YEAR && slice.year <= TIMELINE_MAX_YEAR));
 let bceOccurrences = 0;
+let modernOccurrences = 0;
+const auditLayers = reachable.map(({ key, year }) => ({
+  file: path.join(mapDir, `${key}.geojson`), snapshotYear: year, selectedYear: year,
+}));
+// The UI uses the present-day layer after the last historical snapshot.
+// Audit it at the displayed endpoint, retaining null for profile lookup but
+// the selected timeline year for achievement visibility, as InfoPanel does.
+if (TIMELINE_MAX_YEAR > available.at(-1).year) {
+  auditLayers.push({ file: "public/data/world.geojson", snapshotYear: null, selectedYear: TIMELINE_MAX_YEAR });
+}
 
-for (const { key, year } of reachable) {
-  const file = `${key}.geojson`;
-  const parsed = JSON.parse(fs.readFileSync(path.join(mapDir, file), "utf8"));
+for (const { file, snapshotYear, selectedYear: year } of auditLayers) {
+  const parsed = JSON.parse(fs.readFileSync(file, "utf8"));
   for (const feature of parsed.features ?? []) {
-    const name = feature.properties?.NAME;
+    const name = snapshotYear === null ? feature.properties?.name : feature.properties?.NAME;
     if (!name) continue;
     total++;
     if (year < 0) bceOccurrences++;
-    const entity = findPoliticalEntity(name, year);
+    if (snapshotYear === null) modernOccurrences++;
+    const entity = findPoliticalEntity(name, snapshotYear);
     if (entity) {
       curated++;
       const works = culturalWorksForPolity(entity.id, year);
@@ -74,6 +84,7 @@ console.log(`Profile occurrences with a visible cultural work: ${withAchievement
 console.log(`Profile occurrences with production or patronage (beyond transmission): ${withCreation}/${total}`);
 console.log(`Profile occurrences without a visible cultural work: ${curated - withAchievements}`);
 console.log(`Historical snapshots audited: ${reachable.length}; BCE feature occurrences: ${bceOccurrences}`);
+console.log(`Modern endpoint audited: ${TIMELINE_MAX_YEAR}; modern feature occurrences: ${modernOccurrences}`);
 console.log("Context cards provide background only; they are not completed achievement curation. Counts describe map snapshot occurrences, not every year or every subject domain.");
 console.log("\ncount\tprofile missing visible works\tsnapshot years");
 for (const [id, entry] of [...profileGaps.entries()].sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0]))) {

@@ -614,14 +614,14 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     domain: "arts",
     discipline: "visual-art",
     subForm: "inscribed law stele",
-    yearStart: -1754,
+    yearStart: -1750,
     yearApprox: true,
     civilizationId: "mesopotamia",
     description:
-      "A 2.25m basalt stele inscribed with one of the earliest and most complete written legal codes, topped with a relief of Hammurabi receiving authority from the god Shamash. Discovered in 1901 at Susa, where it had been carried off as war booty; now in the Louvre.",
-    sourceLink: "https://en.wikipedia.org/wiki/Code_of_Hammurabi",
+      "A basalt stele presenting 282 legal judgements associated with Hammurabi, king of Babylon, and a relief of the king before the sun god Shamash. Engraved around 1750 BCE, it is a collection of case law rather than a legal code in the modern sense. The monument is now in the Louvre.",
+    sourceLink: "https://www.louvre.fr/en/the-code-of-hammurabi",
     license: "Public domain (ancient artifact)",
-    dataSource: "Louvre Museum records; general historical consensus",
+    dataSource: "Louvre, The Code of Hammurabi",
   },
   {
     id: "ishtar-gate",
@@ -631,13 +631,13 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     discipline: "architecture",
     subForm: "monumental city gate",
     yearStart: -575,
-    yearApprox: false,
+    yearApprox: true,
     civilizationId: "mesopotamia",
     description:
       "The eighth gate to the inner city of Babylon, faced in glazed blue brick with rows of sculpted dragons and bulls. Excavated in the early 20th century and reconstructed at the Pergamon Museum in Berlin from the recovered bricks.",
-    sourceLink: "https://en.wikipedia.org/wiki/Ishtar_Gate",
+    sourceLink: "https://www.smb.museum/fileadmin/website/Presse/Pressematerial/2023/08/VAM_230815_Gate_PR_EN.pdf",
     license: "Public domain (ancient artifact)",
-    dataSource: "Pergamon Museum records; general historical consensus",
+    dataSource: "Staatliche Museen zu Berlin, Ishtar Gate: Between Babylon and Berlin (2023); construction under Nebuchadnezzar II in the sixth century BCE",
   },
   {
     id: "standard-of-ur",
@@ -646,14 +646,15 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     domain: "arts",
     discipline: "visual-art",
     subForm: "inlaid wooden box (mosaic panels)",
-    yearStart: -2600,
+    yearStart: -2550,
+    yearEnd: -2400,
     yearApprox: true,
     civilizationId: "mesopotamia",
     description:
       "A hollow wooden box inlaid with shell, red limestone, and lapis lazuli, its two main panels conventionally called \"War\" and \"Peace,\" found in a royal grave at Ur. Its actual function is debated -- the name comes from an early, likely mistaken guess that it was carried on a pole as a military standard.",
-    sourceLink: "https://en.wikipedia.org/wiki/Standard_of_Ur",
+    sourceLink: "https://www.britishmuseum.org/collection/object/W_1928-1010-3",
     license: "Public domain (ancient artifact); photos © British Museum, CC BY-NC-SA",
-    dataSource: "British Museum records",
+    dataSource: "British Museum, object 121201 (Standard of Ur), production date 2550–2400 BCE",
   },
 
   // --- Ancient Egypt ---
@@ -803,8 +804,8 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     yearApprox: false,
     civilizationId: "rome",
     description:
-      "A Latin epic tracing the mythical Trojan refugee Aeneas's journey to Italy and his role as legendary ancestor of the Roman people, commissioned in the spirit of (if not literally by) Augustus. Left unfinished at Virgil's death in 19 BCE; he reportedly asked for it to be burned, a request Augustus overrode.",
-    sourceLink: "https://en.wikipedia.org/wiki/Aeneid",
+      "A Latin epic tracing the mythical Trojan refugee Aeneas's journey to Italy and his role as legendary ancestor of the Roman people. Written within Augustan literary culture and left unfinished at Virgil's death in 19 BCE; an imperial commission is not established by this association.",
+    sourceLink: "https://www.metmuseum.org/essays/augustan-rule-27-b-c-14-a-d",
     license: "Public domain (ancient text)",
     dataSource: "General classical-studies consensus",
   },
@@ -855,7 +856,7 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "rome",
     description:
       "An idealized, propagandistic statue of the emperor Augustus in military dress, likely a marble copy of a lost bronze original, discovered at his wife Livia's villa. Its breastplate reliefs commemorate a diplomatic victory over Parthia, and traces of original paint show the statue was once vividly colored.",
-    sourceLink: "https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta",
+    sourceLink: "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/braccio-nuovo/Augusto-di-Prima-Porta.html",
     license: "Public domain (ancient artifact); Vatican Museums photo policy applies to photos",
     dataSource: "Vatican Museums records",
   },
@@ -1527,7 +1528,7 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "greece",
     description:
       "A 13-book systematic treatment of geometry and number theory, built axiomatically from a small set of definitions and postulates -- the model for deductive mathematical proof for over two thousand years and, after religious texts, one of the most-published books in history.",
-    sourceLink: "https://en.wikipedia.org/wiki/Euclid%27s_Elements",
+    sourceLink: "https://mathshistory.st-andrews.ac.uk/Biographies/Euclid/",
     license: "Public domain (ancient text)",
     dataSource: "General history-of-mathematics consensus",
   },
@@ -1577,7 +1578,7 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "greece",
     description:
       "A mathematically rigorous geocentric model of the cosmos, complete with a star catalog and predictive tables for planetary motion, that remained the authoritative astronomical reference in both the Islamic world and Europe for roughly 1,400 years until Copernicus. Written in Roman-ruled Alexandria by an author working in the Greek scientific tradition.",
-    sourceLink: "https://en.wikipedia.org/wiki/Almagest",
+    sourceLink: "https://mathshistory.st-andrews.ac.uk/Biographies/Ptolemy/",
     license: "Public domain (ancient text)",
     dataSource: "General history-of-astronomy consensus",
   },
@@ -1613,7 +1614,7 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "rome",
     description:
       "An enormous body of anatomical and physiological work by a Greek physician practicing in Rome, including as personal physician to several emperors, based partly on animal dissection (human dissection being largely off-limits). His theories dominated Western and Islamic medicine for over a millennium, errors and all, until Vesalius began correcting them.",
-    sourceLink: "https://en.wikipedia.org/wiki/Galen",
+    sourceLink: "https://www.nlm.nih.gov/hmd/topics/greek-medicine/index.html",
     license: "Public domain (ancient text)",
     dataSource: "General history-of-medicine consensus",
   },

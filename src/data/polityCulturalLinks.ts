@@ -2,6 +2,8 @@ import { CULTURAL_WORKS } from "./culturalWorks";
 import { GLOBAL_CULTURAL_LINKS } from "./expansion/globalLinks";
 import { ANCIENT_MEDITERRANEAN_LINKS } from "./expansion/ancientMediterranean";
 import { HIGH_FREQUENCY_CULTURAL_LINKS } from "./expansion/highFrequencyCulture";
+import { MESOPOTAMIA_CULTURAL_LINKS } from "./expansion/mesopotamiaLinks";
+import { CLASSICAL_CULTURAL_LINKS } from "./expansion/classicalLinks";
 import type { PolityCulturalLink } from "../types";
 
 /**
@@ -28,6 +30,8 @@ export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
     confidence: "high",
   },
   ...GLOBAL_CULTURAL_LINKS,
+  ...MESOPOTAMIA_CULTURAL_LINKS,
+  ...CLASSICAL_CULTURAL_LINKS,
   ...ANCIENT_MEDITERRANEAN_LINKS,
   ...HIGH_FREQUENCY_CULTURAL_LINKS,
   {
