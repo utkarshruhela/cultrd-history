@@ -88,7 +88,7 @@ export interface PoliticalEntityProfile {
    */
   nameAliases: string[];
   kind: PoliticalEntityKind;
-  /** The entity's own historical span -- shown as "Ruling period" and used (with a buffer) to gate name matching by year. */
+  /** The entity's own historical span -- shown as "Ruling period" and used to gate name matching by snapshot year. */
   periodStart: number;
   periodEnd: number;
   periodApprox: boolean;

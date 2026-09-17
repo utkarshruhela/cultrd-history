@@ -3030,23 +3030,6 @@ export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
 ];
 
 
-/**
- * How far (in years) a click's active-slice year is allowed to fall outside
- * an entity's own [periodStart, periodEnd] and still count as a match.
- * Historical-basemaps snapshots are irregularly spaced and "hold" between
- * known years (see useHistoricalData's header comment), so a slice can
- * legitimately still be labelled with an entity's name a few decades past
- * its conventional end/before its conventional start. The one case this
- * buffer must NOT do is bridge a genuinely different, same-named entity --
- * e.g. "Mali" the medieval empire (periodEnd 1670) vs. the modern Republic
- * of Mali (post-1945 slices) are ~275 years apart, safely outside this
- * buffer. Kept deliberately smaller than the ~275-year Mali gap so a
- * shorter same-name collision (e.g. a name reused for both a mid-19th-
- * century monarchy and its 20th-century republican successor) doesn't get
- * bridged by accident -- see scripts/verify-entity-matches.mjs, which
- * checks every entity's real slice-year occurrences against this buffer.
- */
-const MATCH_BUFFER_YEARS = 60;
 
 /** Build once: exact NAME string -> chronologically scoped profiles. */
 const BY_NAME = new Map<string, PoliticalEntityProfile[]>();
@@ -3076,22 +3059,15 @@ for (const entity of POLITICAL_ENTITIES) {
     BY_NAME.set(alias, exactCandidates);
     const canonical = canonicalName(alias);
     const candidates = BY_CANONICAL_NAME.get(canonical) ?? [];
-    candidates.push(entity);
+    if (!candidates.some((candidate) => candidate.id === entity.id)) candidates.push(entity);
     BY_CANONICAL_NAME.set(canonical, candidates);
   }
 }
 
 /**
  * Looks up a curated profile for a clicked map entity, if one exists for
- * this exact name and the active slice's year plausibly falls within (or
- * near) the entity's own historical span. `activeSliceYear` is null for the
- * modern map ("today"): rather than treating that as an ordinary year and
- * applying the historical-imprecision buffer below (which would let a
- * recently-defunct entity like the Kingdom of Nepal, periodEnd 2008,
- * incorrectly claim to still rule the modern map), it requires the entity's
- * periodEnd to actually reach the present -- true for still-ongoing entities
- * modeled with a far-future periodEnd (e.g. Bhutan, periodEnd 2100), false
- * for anything that has genuinely ended.
+ * name and the snapshot year falls inside its documented historical span.
+ * A null year selects the modern map and requires a currently active profile.
  */
 export function findPoliticalEntity(name: string | null, activeSliceYear: number | null): PoliticalEntityProfile | undefined {
   if (!name) return undefined;
@@ -3106,20 +3082,14 @@ export function findPoliticalEntity(name: string | null, activeSliceYear: number
     const current = candidates.filter((entity) => entity.periodEnd >= new Date().getFullYear());
     return current.length === 1 ? current[0] : undefined;
   }
-  // Prefer a profile whose documented interval actually contains the
-  // snapshot. The buffer is only a fallback for coarse historical slices;
-  // otherwise adjacent successor states sharing a label (e.g. France or
-  // Portugal) would both match for sixty years and produce an empty panel.
+  // Resolve reused names only when a single documented interval contains
+  // the snapshot. Overlaps require editorial disambiguation.
   const exactPeriod = candidates.filter(
     (entity) => activeSliceYear >= entity.periodStart && activeSliceYear <= entity.periodEnd,
   );
   if (exactPeriod.length === 1) return exactPeriod[0];
   if (exactPeriod.length > 1) return undefined;
-  const matching = candidates.filter(
-    (entity) => activeSliceYear >= entity.periodStart - MATCH_BUFFER_YEARS && activeSliceYear <= entity.periodEnd + MATCH_BUFFER_YEARS,
-  );
-  // A canonical form may reasonably refer to more than one historic state.
-  // Fail closed unless the active snapshot disambiguates one profile.
-  if (matching.length !== 1) return undefined;
-  return matching[0];
+  // A held map snapshot does not extend a government's historical lifetime.
+  // Out-of-period labels need a separate successor profile or context card.
+  return undefined;
 }

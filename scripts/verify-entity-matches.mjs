@@ -86,7 +86,14 @@ for (const entity of POLITICAL_ENTITIES) {
 for (const [name, years] of occurrences) {
   for (const year of years) {
     rawOccurrences++;
-    if (findPoliticalEntity(name, year)) matchedRawOccurrences++;
+    const match = findPoliticalEntity(name, year);
+    if (match) {
+      matchedRawOccurrences++;
+      if (year < match.periodStart || year > match.periodEnd) {
+        console.error(`Out-of-period profile: ${name} at ${year} matched ${match.id}`);
+        ok = false;
+      }
+    }
   }
 }
 
