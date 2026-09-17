@@ -138,6 +138,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 1600,
   },
   {
+    id: "medieval_nubia",
+    label: "Medieval Nubia",
+    note: "A regional grouping for the Christian kingdoms of Nobadia, Makuria, and Alwa; pin is near Old Dongola and is not a claim of a fixed border.",
+    lat: 18.23,
+    lon: 30.75,
+    yearStart: 550,
+    yearEnd: 1500,
+  },
+  {
     id: "islamic_golden_age",
     label: "Islamic Golden Age",
     note: "Spanned Iberia to Central Asia under the Abbasid Caliphate; pin is at Baghdad, its intellectual center. Individual works below may be far from this point.",

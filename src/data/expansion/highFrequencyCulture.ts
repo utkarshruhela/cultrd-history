@@ -200,6 +200,23 @@ export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
     license: "Public domain historical infrastructure; educational facts",
     dataSource: "Library of Congress, Rise of Industrial America overview.",
   },
+  {
+    id: "medieval-nubian-churches-and-soba",
+    title: "Medieval Nubian churches and the city of Soba",
+    creator: null,
+    attribution: "Nubian Christian builders, artists, and urban communities",
+    domain: "arts",
+    discipline: "architecture",
+    subForm: "church architecture, painted interiors, and urban archaeology",
+    yearStart: 600,
+    yearEnd: 1500,
+    yearApprox: true,
+    civilizationId: "medieval_nubia",
+    description: "The medieval Nubian kingdoms produced churches, cathedral centres, wall paintings, and urban settlements. At Soba, the capital of Alwa, archaeological work records the scale and complexity of the city; across Nubia, ecclesiastical architecture is a principal surviving witness to the Christian kingdoms' visual culture.",
+    sourceLink: "https://soba.uw.edu.pl/en/",
+    license: "Archaeological sites and public-domain historical facts",
+    dataSource: "Soba Archaeological Project, University of Warsaw; British Museum, Sudan, Egypt and Nubia galleries.",
+  },
 ];
 
 export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
@@ -220,4 +237,6 @@ export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
   { polityId: "kingdom-of-tonga", culturalWorkId: "tui-tonga-lapaha-monuments", relationship: "transmitted", start: 1845, end: 2026, note: "The later Kingdom of Tonga maintains the royal landscape of the older Tu'i Tonga polity; this is a heritage-transmission link.", confidence: "medium" },
   { polityId: "spanish-philippines", culturalWorkId: "manila-galleon-network", relationship: "produced", start: 1565, end: 1815, note: "The colonial Manila administration was the Asian terminus of the Manila–Acapulco galleon system.", confidence: "high" },
   { polityId: "united-states-of-america", culturalWorkId: "transcontinental-railroad", relationship: "produced", start: 1863, end: 1869, note: "Federal legislation and U.S. chartered companies enabled the railroad; the panel note retains the central role of migrant labour.", confidence: "high" },
+  { polityId: "makuria-medieval-nubia", culturalWorkId: "medieval-nubian-churches-and-soba", relationship: "produced", start: 600, end: 1500, note: "Churches and cathedral centres are central material evidence for Makuria's Christian artistic and urban culture; this link is regional rather than a claim of a named royal commission.", confidence: "medium" },
+  { polityId: "alodia-alwa-medieval-nubia", culturalWorkId: "medieval-nubian-churches-and-soba", relationship: "produced", start: 600, end: 1500, note: "Soba was Alwa's capital and the archaeological project documents the city and its Christian material culture; individual patronage is not securely known.", confidence: "high" },
 ];
