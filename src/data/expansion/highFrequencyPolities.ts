@@ -8,6 +8,62 @@ import type { PoliticalEntityProfile } from "../../types";
  */
 export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
   {
+    id: "british-honduras-belize",
+    nameAliases: ["Belize"],
+    kind: "other",
+    periodStart: 1862,
+    periodEnd: 1980,
+    periodApprox: false,
+    description: "British Honduras was formally constituted as a British colony in 1862 and renamed Belize in 1973 before independence in 1981. The profile does not replace the long histories of Maya communities or other peoples of the region with the later colonial territorial frame.",
+    rulers: [
+      { name: "George Price", reignStart: 1964, reignEnd: 1981, note: "Head of government during the final self-government and independence period" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "UK National Archives, Caribbean social and cultural history records; Encyclopaedia Britannica, Belize",
+  },
+  {
+    id: "independent-belize",
+    nameAliases: ["Belize"],
+    kind: "other",
+    periodStart: 1981,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "Belize became an independent Commonwealth state in 1981. This profile is limited to the sovereign state, rather than treating the modern name as a historical polity for every era represented by the map.",
+    rulers: [
+      { name: "George Price", reignStart: 1981, reignEnd: 1984, note: "First prime minister after independence" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Government of Belize, Independence history; Encyclopaedia Britannica, Belize",
+  },
+  {
+    id: "british-dominica",
+    nameAliases: ["Dominica"],
+    kind: "other",
+    periodStart: 1763,
+    periodEnd: 1977,
+    periodApprox: false,
+    description: "Britain took possession of Dominica under the 1763 Treaty of Paris and governed it through colonial arrangements until independence in 1978. The profile identifies that colonial period and does not substitute it for Kalinago histories or for the independent Commonwealth of Dominica.",
+    rulers: [
+      { name: "British colonial governors", reignStart: 1763, reignEnd: 1978, note: "Colonial administration rather than an independent Dominican monarchy" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Government of Dominica, Historical Information",
+  },
+  {
+    id: "commonwealth-of-dominica",
+    nameAliases: ["Dominica"],
+    kind: "republic",
+    periodStart: 1978,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "The Commonwealth of Dominica gained independence in 1978. It is distinct from the Dominican Republic and from the island's earlier Kalinago and colonial histories; this date-scoped record prevents that name collision in the map panel.",
+    rulers: [
+      { name: "Patrick John", reignStart: 1978, reignEnd: 1979, note: "First prime minister after independence" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Government of Dominica, Historical Information",
+  },
+  {
     id: "republic-of-paraguay",
     nameAliases: ["Paraguay"],
     kind: "republic",

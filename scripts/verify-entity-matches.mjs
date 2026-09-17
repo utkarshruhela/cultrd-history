@@ -126,6 +126,8 @@ const EXPECTED_STILL_ONGOING = new Set([
   "canada-confederation-and-modern-state",
   "swiss-confederation-continuity",
   "independent-samoa",
+  "independent-belize",
+  "commonwealth-of-dominica",
 ]);
 const world = JSON.parse(fs.readFileSync("public/data/world.geojson", "utf8"));
 for (const feat of world.features) {
