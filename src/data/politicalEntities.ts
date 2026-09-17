@@ -1,4 +1,5 @@
 import type { PoliticalEntityProfile } from "../types";
+import { HIGH_FREQUENCY_POLITIES } from "./expansion/highFrequencyPolities";
 
 // A curated pilot of political-entity profiles for the map's info panel --
 // see types.ts's "Political entity profiles" section for the full rationale.
@@ -18,6 +19,7 @@ import type { PoliticalEntityProfile } from "../types";
 // src/components/InfoPanel.tsx) -- no regression, just progressive
 // enrichment as more entities get the same treatment in later passes.
 export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
+  ...HIGH_FREQUENCY_POLITIES,
   {
     id: "mughal-empire",
     nameAliases: ["Mughal Empire"],
@@ -3043,8 +3045,8 @@ export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
  */
 const MATCH_BUFFER_YEARS = 60;
 
-/** Build once: exact NAME string -> profile. */
-const BY_NAME = new Map<string, PoliticalEntityProfile>();
+/** Build once: exact NAME string -> chronologically scoped profiles. */
+const BY_NAME = new Map<string, PoliticalEntityProfile[]>();
 const BY_CANONICAL_NAME = new Map<string, PoliticalEntityProfile[]>();
 
 /**
@@ -3066,7 +3068,9 @@ function canonicalName(name: string): string {
 
 for (const entity of POLITICAL_ENTITIES) {
   for (const alias of entity.nameAliases) {
-    BY_NAME.set(alias, entity);
+    const exactCandidates = BY_NAME.get(alias) ?? [];
+    exactCandidates.push(entity);
+    BY_NAME.set(alias, exactCandidates);
     const canonical = canonicalName(alias);
     const candidates = BY_CANONICAL_NAME.get(canonical) ?? [];
     candidates.push(entity);
@@ -3092,7 +3096,7 @@ export function findPoliticalEntity(name: string | null, activeSliceYear: number
   // whitespace so an otherwise exact curated alias cannot silently fall back
   // to the sparse panel.
   const exact = BY_NAME.get(name.trim());
-  const candidates = exact ? [exact] : BY_CANONICAL_NAME.get(canonicalName(name)) ?? [];
+  const candidates = exact ?? BY_CANONICAL_NAME.get(canonicalName(name)) ?? [];
   if (candidates.length === 0) return undefined;
 
   const matchesYear = (entity: PoliticalEntityProfile) => {

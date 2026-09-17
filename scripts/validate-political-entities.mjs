@@ -26,11 +26,20 @@ for (const e of POLITICAL_ENTITIES) {
     ok = false;
   }
   for (const alias of e.nameAliases ?? []) {
-    if (aliasOwner.has(alias)) {
-      console.error(`nameAlias "${alias}" is claimed by both "${aliasOwner.get(alias)}" and "${e.id}".`);
-      ok = false;
+    const owners = aliasOwner.get(alias) ?? [];
+    for (const other of owners) {
+      // Reused map labels are valid when their state periods cannot be
+      // mistaken for one another at snapshot resolution. The runtime matcher
+      // selects by year and fails closed on an ambiguity.
+      const BUFFER = 60;
+      const overlaps = e.periodStart <= other.periodEnd + BUFFER && other.periodStart <= e.periodEnd + BUFFER;
+      if (overlaps) {
+        console.error(`nameAlias "${alias}" has overlapping profiles "${other.id}" and "${e.id}".`);
+        ok = false;
+      }
     }
-    aliasOwner.set(alias, e.id);
+    owners.push(e);
+    aliasOwner.set(alias, owners);
   }
 
   if (!e.description || !e.kind || !e.license || !e.dataSource) {
