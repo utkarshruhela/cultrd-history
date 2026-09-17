@@ -8,6 +8,18 @@ import type { PoliticalEntityProfile } from "../../types";
  */
 export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
   {
+    id: "restoration-england-ireland-map",
+    nameAliases: ["England and Ireland"],
+    kind: "other",
+    periodStart: 1660,
+    periodEnd: 1706,
+    periodApprox: false,
+    description: "This composite atlas label groups England and Ireland under the restored monarchy. They remained distinct kingdoms, not the United Kingdom created in 1801; Scotland also shared the monarch but was a separate kingdom. The Restoration began in 1660. England and Scotland became Great Britain in May 1707, while Ireland retained its separate parliament until 1801. The profile stops at the last full calendar year before the 1707 union.",
+    rulers: [],
+    license: "Historical facts; original summary",
+    dataSource: "UK Parliament, Act of Union 1707 overview: https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/overview/ ; Commons Library, The Crown and the constitution, CBP-8885: https://researchbriefings.files.parliament.uk/documents/CBP-8885/CBP-8885.pdf",
+  },
+  {
     id: "italian-republic",
     nameAliases: ["Italy"],
     kind: "republic",
