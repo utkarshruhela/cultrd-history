@@ -135,6 +135,20 @@ export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
     sourceLink: "https://www.metmuseum.org/essays/kingdoms-of-madagascar-maroserana-and-merina",
     sourceLabel: "The Metropolitan Museum of Art, Kingdoms of Madagascar: Maroserana and Merina",
   },
+  {
+    nameAliases: ["Britany"],
+    title: "Brittany: a historical region",
+    description: "The map's “Britany” spelling denotes Brittany, a region whose political status shifted through Breton kingdoms and duchies, incorporation into France, and modern regional administration. Its long-lived megalithic and cultural landscapes cannot responsibly be reduced to one uninterrupted state or ruler list.",
+    sourceLink: "https://whc.unesco.org/en/decisions/8957/",
+    sourceLabel: "UNESCO World Heritage Committee, Megalithic Sites of Carnac and the shores of Morbihan",
+  },
+  {
+    nameAliases: ["Sardinia"],
+    title: "Sardinia: a Mediterranean island with changing polities",
+    description: "Sardinia is an island whose history includes Nuragic communities, Phoenician, Carthaginian and Roman rule, medieval judicates, and later dynastic and Italian state frameworks. A polygon labelled simply “Sardinia” is geographic shorthand, not proof of a single state extending across the map's long timeline.",
+    sourceLink: "https://whc.unesco.org/en/list/833/",
+    sourceLabel: "UNESCO World Heritage Centre, Su Nuraxi di Barumini",
+  },
 ];
 
 const BY_NAME = new Map<string, MapLabelContext>();
