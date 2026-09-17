@@ -3045,9 +3045,32 @@ const MATCH_BUFFER_YEARS = 60;
 
 /** Build once: exact NAME string -> profile. */
 const BY_NAME = new Map<string, PoliticalEntityProfile>();
+const BY_CANONICAL_NAME = new Map<string, PoliticalEntityProfile[]>();
+
+/**
+ * Historical-basemaps' labels vary between snapshots (for example, "Timurid
+ * Empire" and "Timurid Emirates"). Canonical matching catches those
+ * presentational variants, but still requires the selected snapshot to fall
+ * inside a profile's period so it cannot silently merge same-named states
+ * from different eras.
+ */
+function canonicalName(name: string): string {
+  return name
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\b(empire|emirates?|kingdom|dynasty|state|states|caliphate|sultanate|khanate|confederacy|republic|principality|principality)\b/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
 for (const entity of POLITICAL_ENTITIES) {
   for (const alias of entity.nameAliases) {
     BY_NAME.set(alias, entity);
+    const canonical = canonicalName(alias);
+    const candidates = BY_CANONICAL_NAME.get(canonical) ?? [];
+    candidates.push(entity);
+    BY_CANONICAL_NAME.set(canonical, candidates);
   }
 }
 
@@ -3068,13 +3091,21 @@ export function findPoliticalEntity(name: string | null, activeSliceYear: number
   // GeoJSON labels are external data. Normalise insignificant surrounding
   // whitespace so an otherwise exact curated alias cannot silently fall back
   // to the sparse panel.
-  const entity = BY_NAME.get(name.trim());
-  if (!entity) return undefined;
+  const exact = BY_NAME.get(name.trim());
+  const candidates = exact ? [exact] : BY_CANONICAL_NAME.get(canonicalName(name)) ?? [];
+  if (candidates.length === 0) return undefined;
+
+  const matchesYear = (entity: PoliticalEntityProfile) => {
+    if (activeSliceYear === null) return entity.periodEnd >= new Date().getFullYear();
+    return activeSliceYear >= entity.periodStart - MATCH_BUFFER_YEARS && activeSliceYear <= entity.periodEnd + MATCH_BUFFER_YEARS;
+  };
+  const matching = candidates.filter(matchesYear);
+  // A canonical form may reasonably refer to more than one historic state.
+  // Fail closed unless the active snapshot disambiguates one profile.
+  if (matching.length !== 1) return undefined;
+  const entity = matching[0];
   if (activeSliceYear === null) {
-    const now = new Date().getFullYear();
-    return entity.periodEnd >= now ? entity : undefined;
+    return entity;
   }
-  if (activeSliceYear < entity.periodStart - MATCH_BUFFER_YEARS) return undefined;
-  if (activeSliceYear > entity.periodEnd + MATCH_BUFFER_YEARS) return undefined;
   return entity;
 }

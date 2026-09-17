@@ -104,6 +104,23 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
 
       {entity && <p className="info-panel-description">{entity.description}</p>}
 
+      {!entity && (
+        <section className="info-panel-map-record" aria-labelledby="map-record-heading">
+          <h3 id="map-record-heading">Map record</h3>
+          <p>
+            This entity is identified by the historical-boundaries source for the displayed snapshot. A full curated
+            profile has not yet been linked to this exact map label.
+          </p>
+          <a
+            href={`https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(selected.name)}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Research {selected.name} ↗
+          </a>
+        </section>
+      )}
+
       {entity && entity.rulers.length > 0 && (
         <div className="info-panel-rulers">
           <h3>Major rulers</h3>
