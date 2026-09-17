@@ -3,6 +3,41 @@ import type { MapLabelContext } from "../types";
 /** Context cards intentionally do not masquerade as political-entity profiles. */
 export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
   {
+    nameAliases: ["Arawaks", "Arawak"],
+    title: "Arawakan peoples and languages",
+    description: "Arawak is an umbrella term with shifting historical use, applied to Indigenous peoples and languages across northern South America and the Caribbean. It does not name one unified state or tribe; a broad polygon must be read as cultural-linguistic geography rather than a ruler's territory.",
+    sourceLink: "https://tile.loc.gov/storage-services/master/frd/frdcstdy/gu/guyanabelizecoun00merr_0/guyanabelizecoun00merr_0.pdf",
+    sourceLabel: "Library of Congress, Guyana and Belize country study",
+  },
+  {
+    nameAliases: ["Blemmyes"],
+    title: "Blemmyes: late-antique peoples of the Eastern Desert and Nubia",
+    description: "Blemmyes is a name used in Greek and Roman sources for mobile peoples in the Eastern Desert and Nubia, especially between the third and sixth centuries CE. It should not be treated as a single state, nor equated uncritically with a modern people; the map label records an ancient external category with limited precision.",
+    sourceLink: "https://www.ucl.ac.uk/museums-static/digitalegypt/foreignrelations/roman.html",
+    sourceLabel: "University College London, Roman Egypt and foreign relations",
+  },
+  {
+    nameAliases: ["Catawba"],
+    title: "Catawba Nation",
+    description: "The Catawba are a Siouan-speaking people of the Carolina Piedmont whose nation continues today. This historical map label is not an extinct tribe or a sovereign country boundary; it represents an evolving homeland and community history.",
+    sourceLink: "https://catawba.com/about-the-nation",
+    sourceLabel: "Catawba Nation, About the Nation",
+  },
+  {
+    nameAliases: ["Cheyenne"],
+    title: "Cheyenne peoples",
+    description: "Cheyenne refers to Indigenous Plains peoples with distinct Northern and Southern communities. The map label is not one historical state; present-day Northern Cheyenne and Cheyenne and Arapaho tribal governments carry continuing community and political histories.",
+    sourceLink: "https://www.cheyenneandarapaho-nsn.gov/",
+    sourceLabel: "Cheyenne and Arapaho Tribes",
+  },
+  {
+    nameAliases: ["Eyaq"],
+    title: "Eyak people and language",
+    description: "Eyak refers to an Alaska Native people and language of the Copper River delta area. The death of the last native speaker in 2008 did not end Eyak people or their cultural and language revitalization work; the map label should not be read as a vanished state or a fixed sovereign border.",
+    sourceLink: "https://www.eyak-nsn.gov/about-us/",
+    sourceLabel: "Native Village of Eyak",
+  },
+  {
     nameAliases: ["Mi'kma'ki"],
     title: "Mi'kma'ki: Mi'kmaq ancestral territory",
     description: "Mi'kma'ki is the ancestral and unceded territory of the Mi'kmaq, traditionally organized into seven districts. It is not a Canadian province or a historical kingdom; a map polygon is an approximate representation of homeland and relationships, not a fixed sovereign border.",
