@@ -28,11 +28,11 @@ for (const e of POLITICAL_ENTITIES) {
   for (const alias of e.nameAliases ?? []) {
     const owners = aliasOwner.get(alias) ?? [];
     for (const other of owners) {
-      // Reused map labels are valid when their state periods cannot be
-      // mistaken for one another at snapshot resolution. The runtime matcher
-      // selects by year and fails closed on an ambiguity.
-      const BUFFER = 60;
-      const overlaps = e.periodStart <= other.periodEnd + BUFFER && other.periodStart <= e.periodEnd + BUFFER;
+      // Reused map labels are valid when their documented state periods do
+      // not overlap. The runtime matcher prefers an exact interval before it
+      // consults its coarse-snapshot buffer, so immediately adjacent
+      // successor states remain unambiguous.
+      const overlaps = e.periodStart <= other.periodEnd && other.periodStart <= e.periodEnd;
       if (overlaps) {
         console.error(`nameAlias "${alias}" has overlapping profiles "${other.id}" and "${e.id}".`);
         ok = false;

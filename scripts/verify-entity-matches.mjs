@@ -111,6 +111,10 @@ const EXPECTED_STILL_ONGOING = new Set([
   "al-busaid-sultanate-oman",
   "portugal-restored-and-modern",
   "modern-french-republic",
+  "spain-bourbon-and-modern-state",
+  "republic-of-egypt",
+  "republic-of-madagascar",
+  "american-samoa-us-territory",
 ]);
 const world = JSON.parse(fs.readFileSync("public/data/world.geojson", "utf8"));
 for (const feat of world.features) {
