@@ -291,6 +291,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 2026,
   },
   {
+    id: "malay_world",
+    label: "Malay World",
+    note: "A maritime and linguistic-cultural region spanning distinct societies in the Malay Peninsula, Sumatra, Borneo, and island Southeast Asia; the pin is only an orientation point.",
+    lat: 3.0,
+    lon: 102.0,
+    yearStart: -500,
+    yearEnd: 2026,
+  },
+  {
     id: "modern_europe",
     label: "Early modern & modern Europe",
     note: "A broad intellectual-history grouping; the pin is only a reference point, not a claim that its works arose in one city or polity.",
