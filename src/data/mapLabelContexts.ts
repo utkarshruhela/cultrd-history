@@ -65,6 +65,55 @@ export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
     sourceLink: "https://www.metmuseum.org/toah/ht/06/afa.html",
     sourceLabel: "The Metropolitan Museum of Art, Eastern and Southern Africa, 500–1000",
   },
+  {
+    nameAliases: ["Anguilla"],
+    title: "Anguilla: an island and British territory",
+    description: "Anguilla is an island with a distinct local history, but the bare map label does not identify one continuous sovereign state. It became a separate British territory in 1980 after its earlier constitutional relationship with Saint Kitts and Nevis; applying that modern status to every older polygon would be misleading.",
+    sourceLink: "https://www.gov.ai/service/about-anguilla/anguilla-history",
+    sourceLabel: "Government of Anguilla, Anguilla History",
+  },
+  {
+    nameAliases: ["Netherlands Antilles"],
+    title: "Netherlands Antilles: a former constituent country",
+    description: "The Netherlands Antilles was a constituent country of the Kingdom of the Netherlands from 1954 until it was dissolved in 2010. It was not a single continuous historical polity for all Caribbean snapshots; its former islands now have differing constitutional relationships with the Kingdom.",
+    sourceLink: "https://treaties.un.org/pages/HistoricalInfo.aspx",
+    sourceLabel: "United Nations Treaty Collection, historical constitutional information",
+  },
+  {
+    nameAliases: ["Saint Barthelemy"],
+    title: "Saint-Barthélemy: an island label",
+    description: "Saint-Barthélemy is an island, not a historical independent country. Since 2007 it has had the status of a French overseas collectivity, but earlier map labels need to be interpreted through their changing French and regional administrative context rather than as the same polity across time.",
+    sourceLink: "https://www.legifrance.gouv.fr/contenu/Media/files/autour-de-la-loi/guide-de-legistique/2025_10_06_fiche_3.6.6_saint-barthelemy.pdf",
+    sourceLabel: "French Government legal-status guide, Saint-Barthélemy",
+  },
+  {
+    nameAliases: ["Saint Martin"],
+    title: "Saint Martin: a divided island",
+    description: "Saint Martin is a geographically divided Caribbean island: its northern part is French Saint-Martin and its southern part is Sint Maarten in the Kingdom of the Netherlands. A bare island label cannot honestly be supplied with one ruler list or one sovereign history; the French collectivity dates from 2007.",
+    sourceLink: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000465963",
+    sourceLabel: "French law establishing the Collectivity of Saint-Martin",
+  },
+  {
+    nameAliases: ["Guadeloupe"],
+    title: "Guadeloupe: an archipelago and French overseas department",
+    description: "Guadeloupe is an archipelago whose administrative scope has changed. It became a French overseas department in 1946; Saint-Barthélemy and French Saint-Martin ceased to fall within its departmental and regional framework in 2007. The map label should not be read as a single sovereign state across all periods.",
+    sourceLink: "https://digitallibrary.un.org/record/368845/files/CERD_C_337_Add.5-EN.pdf",
+    sourceLabel: "United Nations documentation on French overseas departments",
+  },
+  {
+    nameAliases: ["Montserrat"],
+    title: "Montserrat: a UK-administered Caribbean territory",
+    description: "Montserrat is a Caribbean island territory administered by the United Kingdom, not an independent historical country. Its political status and regional associations changed over time, including membership in the West Indies Federation from 1958 to 1962; a generic map label needs this territorial context rather than invented national rulers.",
+    sourceLink: "https://www.un.org/dppa/decolonization/en/node/682",
+    sourceLabel: "United Nations, Montserrat decolonization profile",
+  },
+  {
+    nameAliases: ["Wallis and Futuna Islands"],
+    title: "Wallis and Futuna: islands with a French territorial status",
+    description: "Wallis and Futuna denotes islands with distinct customary kingdoms as well as a later French territorial framework. French overseas-territory status dates from 1961; a single generic map label cannot turn the islands' earlier and local political histories into one uninterrupted state.",
+    sourceLink: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000684031/",
+    sourceLabel: "French law on Wallis and Futuna's 1961 status",
+  },
 ];
 
 const BY_NAME = new Map<string, MapLabelContext>();

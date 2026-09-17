@@ -968,4 +968,33 @@ export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
     license: "Public domain (historical facts)",
     dataSource: "UNESCO World Heritage Centre, Medieval Monuments in Kosovo; Republic of Serbia Institute for the Protection of Cultural Monuments",
   },
+  {
+    id: "antigua-and-barbuda-independent-state",
+    nameAliases: ["Antigua and Barbuda"],
+    kind: "other",
+    periodStart: 1981,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "Antigua and Barbuda became an independent Commonwealth state on 1 November 1981. This profile begins with independence and does not project the sovereign state backward over the islands' Indigenous histories, colonial rule, or the earlier associated-state arrangement.",
+    rulers: [
+      { name: "Vere Bird", reignStart: 1981, reignEnd: 1994, note: "First prime minister after independence" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Government of Antigua and Barbuda, Constitution and national history",
+  },
+  {
+    id: "sierra-leone-independent-state",
+    nameAliases: ["Sierra Leone"],
+    kind: "republic",
+    periodStart: 1961,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "Sierra Leone became an independent sovereign state on 27 April 1961 and a republic in 1971. The profile distinguishes that postcolonial state from the earlier British colony and protectorate and does not turn the country's complex precolonial and Krio histories into a mere prelude to independence.",
+    rulers: [
+      { name: "Milton Margai", reignStart: 1961, reignEnd: 1964, note: "First prime minister after independence" },
+      { name: "Ahmad Tejan Kabbah", reignStart: 1996, reignEnd: 2007, note: "President during the end of the civil war and postwar reconstruction" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Sierra Leone Ministry of Tourism, History of Sierra Leone; United Nations member-state records",
+  },
 ];
