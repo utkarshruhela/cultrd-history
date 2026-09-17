@@ -44,6 +44,27 @@ export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
     sourceLink: "https://www.usfq.edu.ec/es/proyectos/tsantsas-museos-y-responsabilidad-social-una-propuesta-conjunta-y-participativa-con-la",
     sourceLabel: "Universidad San Francisco de Quito, Shuar collaborative research",
   },
+  {
+    nameAliases: ["Mossi States"],
+    title: "Mossi states: a family of kingdoms",
+    description: "“Mossi States” is a collective map label for several historically distinct Mossi kingdoms in the region of present-day Burkina Faso, rather than one sovereign state with one ruler list. Their political and artistic histories varied between courts such as Ouagadougou and Yatenga; a reliable dynasty card needs the particular kingdom and date.",
+    sourceLink: "https://www.metmuseum.org/art/collection/search/314810",
+    sourceLabel: "The Metropolitan Museum of Art, Mossi royal-court sculpture",
+  },
+  {
+    nameAliases: ["Bantou"],
+    title: "Bantu: a broad language-family map label",
+    description: "This historical-map label refers broadly to Bantu-speaking peoples, not to a single kingdom, ethnicity, or ruler. Bantu languages are spoken across a vast area and their speakers have formed many different societies and states; the polygon should be read as a coarse cultural-linguistic category rather than sovereignty.",
+    sourceLink: "https://www.metmuseum.org/toah/ht/06/afa.html",
+    sourceLabel: "The Metropolitan Museum of Art, Eastern and Southern Africa, 500–1000",
+  },
+  {
+    nameAliases: ["Islamic city-states"],
+    title: "Islamic city-states: a regional shorthand",
+    description: "This label compresses multiple independent or semi-independent urban polities into one polygon. Religious affiliation and trading connections did not make them a single state: accurate political context depends on the named city, dynasty, and snapshot year.",
+    sourceLink: "https://www.metmuseum.org/toah/ht/06/afa.html",
+    sourceLabel: "The Metropolitan Museum of Art, Eastern and Southern Africa, 500–1000",
+  },
 ];
 
 const BY_NAME = new Map<string, MapLabelContext>();
