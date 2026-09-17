@@ -3,6 +3,38 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "vasa-shipbuilding",
+    title: "Vasa: shipbuilding and a stability failure",
+    creator: null,
+    attribution: "Henrik Hybertsson and Stockholm shipyard workers; commissioned by Gustav II Adolf",
+    domain: "stem",
+    discipline: "engineering-invention",
+    subForm: "naval construction and engineering failure",
+    yearStart: 1626,
+    yearEnd: 1628,
+    yearApprox: false,
+    civilizationId: "modern_europe",
+    description: "Built in Stockholm, Vasa combined heavy armament, elaborate sculpture, and large-scale timber construction. Its high centre of gravity and inadequate stability caused it to sink on its maiden voyage in 1628. The surviving ship documents the capabilities and limits of contemporary shipbuilding, rather than a successful naval innovation.",
+    sourceLink: "https://www.vasamuseet.se/en/explore/vasa-history/facts-about-vasa",
+    license: "Historical facts; original summary",
+    dataSource: "Vasa Museum, Facts about Vasa and The Disaster.",
+  },
+  {
+    id: "linnaeus-species-plantarum",
+    title: "Species plantarum and botanical naming",
+    creator: "Carl Linnaeus",
+    domain: "stem",
+    discipline: "medicine-biology",
+    subForm: "botanical nomenclature",
+    yearStart: 1753,
+    yearApprox: false,
+    civilizationId: "modern_europe",
+    description: "Linnaeus consistently applied two-part names to plant species in this catalogue, helping standardize communication among botanists. Its publication remains a starting point for botanical nomenclature, although subsequent science has substantially revised the classification of plants. The work drew on specimens and descriptions circulating through international collecting networks.",
+    sourceLink: "https://www.linnean.org/news/2023/09/06/species-plantarum-at-270",
+    license: "Public domain historical text; original summary",
+    dataSource: "Linnean Society, Species Plantarum at 270; Naming Nature.",
+  },
+  {
     id: "ivrea-olivetti-industrial-city",
     title: "Ivrea: Olivetti's industrial city",
     creator: null,
@@ -1477,6 +1509,8 @@ export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
 ];
 
 export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "kingdom-of-sweden-continuity", culturalWorkId: "vasa-shipbuilding", relationship: "commissioned", start: 1626, end: 1628, note: "Gustav II Adolf commissioned Vasa in 1625; this link dates its construction and records its failure as part of engineering history.", confidence: "high" },
+  { polityId: "kingdom-of-sweden-continuity", culturalWorkId: "linnaeus-species-plantarum", relationship: "produced", start: 1753, end: 1753, note: "The Swedish botanist's publication belongs to Sweden's eighteenth-century scholarly setting and international botanical networks; no royal commission is asserted.", confidence: "high" },
   { polityId: "kingdom-of-italy-1861-1946", culturalWorkId: "ivrea-olivetti-industrial-city", relationship: "produced", start: 1930, end: 1946, note: "Ivrea's early modern industrial development took place during the kingdom; the project was corporate and architectural rather than a royal commission.", confidence: "high" },
   { polityId: "italian-republic", culturalWorkId: "ivrea-olivetti-industrial-city", relationship: "produced", start: 1946, end: 1969, note: "Postwar construction continued Olivetti's industrial and social project; this link credits production during the republic without asserting government authorship.", confidence: "high" },
   { polityId: "solomonic-dynasty-kingdom-of-ethiopia", culturalWorkId: "fasil-ghebbi-gondar", relationship: "commissioned", start: 1636, end: 1750, note: "Fasilides and succeeding Ethiopian rulers commissioned the capital's royal and religious buildings over multiple generations.", confidence: "high" },
