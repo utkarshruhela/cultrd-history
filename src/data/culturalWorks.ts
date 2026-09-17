@@ -586,9 +586,9 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "mughal_india",
     description:
       "Tansen was a leading musician at Akbar's court and is conventionally associated with dhrupad, a major North Indian classical vocal tradition. This entry documents court patronage and performance in the sixteenth-century Mughal setting; it does not claim that Tansen invented dhrupad or that every later attribution to him is historically secure.",
-    sourceLink: "https://www.britannica.com/biography/Tansen",
+    sourceLink: "https://sansadkikala.ignca.gov.in/details/sangeet-deergha/en?goto=5",
     license: "Public domain (historical facts); musical repertoire remains a living tradition",
-    dataSource: "Encyclopaedia Britannica, 'Tansen'; date range treated as approximate",
+    dataSource: "IGNCA, Sansad ki Kala, Sangeet Deergha; biographical date range approximate, with differing accounts of Tansen's death",
   },
   // --- Mesopotamia ---
   {

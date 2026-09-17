@@ -14,6 +14,7 @@ import type { PolityCulturalLink } from "../types";
  * honest empty state rather than inferred from a broad civilisation tag.
  */
 export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "mughal-empire", culturalWorkId: "tansen-dhrupad-mughal-court", relationship: "patronised", start: 1562, end: 1589, note: "Akbar supported Tansen as a court musician. The range is approximate: accounts differ on his death date, and later repertoire attributed to him cannot all be dated securely to his lifetime.", confidence: "medium" },
   { polityId: "tang-empire", culturalWorkId: "wujing-zhengyi-tang", relationship: "commissioned", start: 653, end: 653, note: "The Tang court authorized this scholarly edition of the Five Classics; 653 marks promulgation, not the start of the compilation or authorship of the ancient classics.", confidence: "high" },
   { polityId: "tang-empire", culturalWorkId: "i-ching", relationship: "transmitted", start: 653, end: 907, note: "The Tang's authorized commentary and examination curriculum transmitted the much older Changes. The dynasty did not originate the Zhou-period divination text.", confidence: "high" },
   { polityId: "restoration-england-ireland-map", culturalWorkId: "principia-newton", relationship: "produced", start: 1687, end: 1687, note: "Newton's Principia was published in England within the territories grouped by this composite map label. This does not imply Irish authorship, a parliamentary union, or a royal commission.", confidence: "high" },
