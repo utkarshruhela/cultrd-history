@@ -3,6 +3,23 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "levuka-port-town",
+    title: "Levuka's port-town architecture",
+    creator: null,
+    attribution: "Fijian communities and colonial-era builders",
+    domain: "arts",
+    discipline: "architecture",
+    subForm: "historic urban landscape",
+    yearStart: 1820,
+    yearEnd: 1900,
+    yearApprox: true,
+    civilizationId: "fiji_islands",
+    description: "Levuka developed around Indigenous villages as a nineteenth-century commercial port and later Fiji's first colonial capital. Its timber buildings and waterfront streets reflect local community influence alongside imported building forms. Growth continued after the capital moved to Suva in 1882; the date range represents the main nineteenth-century development, not Fiji's cultural beginnings.",
+    sourceLink: "https://whc.unesco.org/en/list/1399",
+    license: "Historical facts; original summary",
+    dataSource: "UNESCO World Heritage Centre, Levuka Historical Port Town, Outstanding Universal Value",
+  },
+  {
     id: "al-kindi-first-philosophy",
     title: "On First Philosophy",
     creator: "Al-Kindi",

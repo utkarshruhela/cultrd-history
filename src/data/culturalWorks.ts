@@ -41,6 +41,15 @@ import { ABBASID_MUSIC_WORKS } from "./expansion/abbasidMusic";
 
 export const CIVILIZATIONS: CivilizationRegion[] = [
   {
+    id: "fiji_islands",
+    label: "Fiji Islands",
+    note: "Geographic frame for Fijian communities and later intercultural histories; not a single dynasty or the origin date of settlement.",
+    lat: -17.68,
+    lon: 178.84,
+    yearStart: 1820,
+    yearEnd: 2026,
+  },
+  {
     id: "byzantine_world",
     label: "Byzantine / Eastern Roman world",
     note: "Constantinople represents a wider network of Eastern Roman artistic and scholarly centres.",
