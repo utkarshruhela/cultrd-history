@@ -282,6 +282,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 1527,
   },
   {
+    id: "southeast_asia_mainland",
+    label: "Mainland Southeast Asia",
+    note: "A regional context for distinct mainland societies and maritime-connected polities; the pin is only an orientation point.",
+    lat: 19.0,
+    lon: 96.0,
+    yearStart: -1000,
+    yearEnd: 2026,
+  },
+  {
     id: "modern_europe",
     label: "Early modern & modern Europe",
     note: "A broad intellectual-history grouping; the pin is only a reference point, not a claim that its works arose in one city or polity.",
