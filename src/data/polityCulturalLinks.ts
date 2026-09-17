@@ -10,6 +10,8 @@ import type { PolityCulturalLink } from "../types";
  * honest empty state rather than inferred from a broad civilisation tag.
  */
 export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "mughal-empire", culturalWorkId: "humayuns-tomb", relationship: "patronised", start: 1560, end: 1570, note: "The garden-tomb was constructed under Akbar's patronage during the 1560s; the dates are approximate.", confidence: "high" },
+  { polityId: "mughal-empire", culturalWorkId: "fatehpur-sikri", relationship: "commissioned", start: 1571, end: 1585, note: "Akbar commissioned the planned city and used it as his capital; the range includes construction and its period as the imperial seat.", confidence: "high" },
   {
     polityId: "timurid-empire",
     culturalWorkId: "ulugh-beg-observatory",
@@ -241,18 +243,18 @@ export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
   {
     polityId: "mughal-empire",
     culturalWorkId: "baburnama",
-    relationship: "produced",
-    start: 1526,
-    end: 1530,
-    note: "Babur's memoir documents the founding generation of Mughal rule in South Asia.",
+    relationship: "patronised",
+    start: 1589,
+    end: 1593,
+    note: "This record describes Akbar's Persian translation and illustrated manuscript, made decades after Babur's original memoir.",
     confidence: "high",
   },
   {
     polityId: "mughal-empire",
     culturalWorkId: "mughal-miniature-painting",
     relationship: "patronised",
-    start: 1556,
-    end: 1707,
+    start: 1560,
+    end: 1600,
     note: "Imperial ateliers developed a durable painting tradition through Persianate and South Asian exchange.",
     confidence: "high",
   },
@@ -269,6 +271,9 @@ export function culturalWorksForPolity(polityId: string, year: number | null) {
     // hidden until their start date.
     if (year !== null && year < link.start) return [];
     const work = WORK_BY_ID.get(link.culturalWorkId);
+    // A link must never reveal an object before the object's own date,
+    // even if the association was accidentally assigned an earlier start.
+    if (work && year !== null && year < work.yearStart) return [];
     return work ? [{ link, work }] : [];
   });
 }
