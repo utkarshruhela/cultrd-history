@@ -6,6 +6,8 @@ import { MESOPOTAMIA_CULTURAL_LINKS } from "./expansion/mesopotamiaLinks";
 import { CLASSICAL_CULTURAL_LINKS } from "./expansion/classicalLinks";
 import { AFRICAN_ORPHAN_LINKS } from "./expansion/africanOrphanLinks";
 import { ISLAMIC_ORPHAN_LINKS } from "./expansion/islamicOrphanLinks";
+import { ABBASID_ART_LINKS } from "./expansion/abbasidArt";
+import { ABBASID_MUSIC_LINKS } from "./expansion/abbasidMusic";
 import type { PolityCulturalLink } from "../types";
 
 /**
@@ -49,6 +51,8 @@ export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
   ...CLASSICAL_CULTURAL_LINKS,
   ...AFRICAN_ORPHAN_LINKS,
   ...ISLAMIC_ORPHAN_LINKS,
+  ...ABBASID_ART_LINKS,
+  ...ABBASID_MUSIC_LINKS,
   ...ANCIENT_MEDITERRANEAN_LINKS,
   ...HIGH_FREQUENCY_CULTURAL_LINKS,
   {

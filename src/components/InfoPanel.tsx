@@ -174,6 +174,9 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
                 <li key={`${link.polityId}-${work.id}`} className="cultural-work">
                   <div className="cultural-work-meta">
                     {work.domain} · {work.discipline.replaceAll("-", " ")}
+                    {" · "}{work.yearEnd !== undefined && work.yearEnd !== work.yearStart
+                      ? formatPeriod(work.yearStart, work.yearEnd, work.yearApprox)
+                      : `${formatYear(work.yearStart)}${work.yearApprox ? " (approx.)" : ""}`}
                   </div>
                   {work.sourceLink && isWikipediaUrl(work.sourceLink) ? (
                     <WikipediaSummaryLink
@@ -189,7 +192,8 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
                   ) : (
                     <span className="cultural-work-title">{work.title}</span>
                   )}
-                  <p>{link.note}</p>
+                  <p>{work.description}</p>
+                  <p className="info-panel-note">{link.note}</p>
                   <span className="cultural-work-evidence">{link.relationship} · {link.confidence} confidence</span>
                 </li>
               ))}
