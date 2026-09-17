@@ -3,6 +3,55 @@ import type { MapLabelContext } from "../types";
 /** Context cards intentionally do not masquerade as political-entity profiles. */
 export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
   {
+    nameAliases: ["Cyprus"],
+    title: "Cyprus: an island across changing political orders",
+    description: "Cyprus has been governed through changing Byzantine, Lusignan, Venetian, Ottoman, and British systems, alongside its own Greek- and Turkish-Cypriot communities and other histories. A country-shaped label in a medieval snapshot cannot truthfully supply one continuous sovereign state or ruler list; the island's layered settlement and architecture require period-specific interpretation.",
+    sourceLink: "https://whc.unesco.org/en/list/79",
+    sourceLabel: "UNESCO World Heritage Centre, Paphos",
+  },
+  {
+    nameAliases: ["Beothuk"],
+    title: "Beothuk: Indigenous people of Newfoundland",
+    description: "Beothuk is the name of an Indigenous people of Newfoundland, not a kingdom. Their coastal and interior lifeways included seasonal movement, fishing, caribou hunting, and distinctive dwellings; European settlement, disease, and dispossession devastated their population. Map polygons should be read as an approximation of homelands and relationships, never as a dynastic border.",
+    sourceLink: "https://www.canada.ca/en/parks-canada/news/2017/10/indian-point-redindianlakenewfoundlandandlabrador.html",
+    sourceLabel: "Parks Canada, Indian Point / Red Indian Lake",
+  },
+  {
+    nameAliases: ["Dorset"],
+    title: "Dorset: an Arctic archaeological culture",
+    description: "Dorset is an archaeological term for peoples and material traditions that lived across parts of the Canadian Arctic before Thule Inuit predominated. It is not the name of a state; carved art, settlement sites, and environmental adaptation are evidence for diverse communities, while the exact processes of transition remain subjects of research.",
+    sourceLink: "https://parks.canada.ca/culture/spm-whs/indicative-tentative/qajartalik",
+    sourceLabel: "Parks Canada, Qajartalik, Nunavik",
+  },
+  {
+    nameAliases: ["Innu"],
+    title: "Innu: Indigenous peoples of Nitassinan",
+    description: "Innu refers to Indigenous peoples whose homeland, Nitassinan, includes parts of Labrador and Québec. Communities have maintained distinct governance, language, hunting, fishing, and kinship practices; the broad historical-map label is not a centralized kingdom and should not be supplied with invented rulers or a modern-state border.",
+    sourceLink: "https://www.thecanadianencyclopedia.ca/en/article/innu-montagnais-naskapi",
+    sourceLabel: "The Canadian Encyclopedia, Innu (Montagnais-Naskapi)",
+  },
+  {
+    nameAliases: ["Sámi"],
+    title: "Sámi: Indigenous peoples of Sápmi",
+    description: "Sámi is a collective name for Indigenous peoples of Sápmi across what are now Norway, Sweden, Finland, and Russia. Their languages, livelihoods, land relations, and political institutions differ by community; a large map polygon denotes a cultural and homeland geography, not one historical empire or monarch.",
+    sourceLink: "https://www.sametinget.se/english",
+    sourceLabel: "Sámi Parliament of Sweden, English information",
+  },
+  {
+    nameAliases: ["Sicily"],
+    title: "Sicily: a Mediterranean island with changing rulers",
+    description: "Sicily has passed through Byzantine, Islamic, Norman, Hohenstaufen, Angevin, Aragonese, Spanish, and other political orders. The island label in a historical map is geographic shorthand: a trustworthy panel must not turn it into a single uninterrupted kingdom or overlook the island's Greek, Arab, Jewish, Latin, and other communities.",
+    sourceLink: "https://whc.unesco.org/en/list/1487",
+    sourceLabel: "UNESCO World Heritage Centre, Arab-Norman Palermo and the Cathedral Churches of Cefalù and Monreale",
+  },
+  {
+    nameAliases: ["Tibet"],
+    title: "Tibet: a plateau region with layered political histories",
+    description: "“Tibet” can designate a cultural and geographical region as well as changing polities and administrations. The Tibetan Empire, religious institutions, local governments, and later imperial and state relationships are not interchangeable; a broad polygon cannot supply one neutral ruler list for every century, especially where present-day political claims are contested.",
+    sourceLink: "https://www.metmuseum.org/toah/hd/tibe/hd_tibe.htm",
+    sourceLabel: "The Metropolitan Museum of Art, Tibet and Himalayan art",
+  },
+  {
     nameAliases: ["Taiwan"],
     title: "Taiwan before modern state frameworks",
     description: "Taiwan is an island with many Indigenous peoples, languages, and local histories, not a single timeless kingdom. For snapshots before Japanese colonial rule, this context card is intentionally cultural and geographic: a border label alone cannot identify one sovereign authority or substitute for the distinct histories of communities such as Amis, Atayal, Paiwan, Bunun, Tao, and many others.",
