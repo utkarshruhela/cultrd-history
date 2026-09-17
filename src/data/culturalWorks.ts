@@ -183,6 +183,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 1258,
   },
   {
+    id: "ottoman_world",
+    label: "Ottoman world",
+    note: "Cultural production across Ottoman lands and exchange networks; Istanbul is a representative map location.",
+    lat: 41.01,
+    lon: 28.98,
+    yearStart: 1299,
+    yearEnd: 1922,
+  },
+  {
     id: "maya",
     label: "Maya civilization",
     note: "Many city-states across the Yucatan and Guatemala; pin is at Chichen Itza.",
