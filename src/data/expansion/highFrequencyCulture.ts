@@ -3,6 +3,21 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "baghdad-round-city",
+    title: "Baghdad's Round City (Madinat al-Salam)",
+    creator: "Commissioned by the caliph al-Mansur",
+    domain: "arts",
+    discipline: "architecture",
+    subForm: "planned capital city",
+    yearStart: 762,
+    yearApprox: false,
+    civilizationId: "islamic_golden_age",
+    description: "Founded in 762 as the Abbasid capital, the circular City of Peace placed a monumental palace-city at the centre of a growing metropolis. Its round plan drew on earlier regional urban traditions. This date marks the foundation, not the completion of every building in Baghdad.",
+    sourceLink: "https://www.metmuseum.org/de/essays/the-art-of-the-abbasid-period-750-1258",
+    license: "Historical facts; original summary",
+    dataSource: "Metropolitan Museum of Art, The Art of the Abbasid Period; Islamic Art, Museum Bulletin 23(6), 1965, identifies al-Mansur as founder.",
+  },
+  {
     id: "wujing-zhengyi-tang",
     title: "Correct Meaning of the Five Classics (Wujing Zhengyi)",
     creator: "Kong Yingda and a team of court scholars",
