@@ -228,6 +228,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 1270,
   },
   {
+    id: "east_africa",
+    label: "East Africa",
+    note: "A regional context for diverse communities and historical states across the Horn and the eastern African coast; the pin is only an orientation point, not a claimed centre.",
+    lat: 2.0,
+    lon: 39.0,
+    yearStart: -1000,
+    yearEnd: 2026,
+  },
+  {
     id: "medieval_renaissance_europe",
     label: "Medieval & Renaissance Europe",
     note: "Spans Italy/France/England; pin is at Florence.",
