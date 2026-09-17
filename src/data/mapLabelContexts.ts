@@ -3,6 +3,13 @@ import type { MapLabelContext } from "../types";
 /** Context cards intentionally do not masquerade as political-entity profiles. */
 export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
   {
+    nameAliases: ["Taiwan"],
+    title: "Taiwan before modern state frameworks",
+    description: "Taiwan is an island with many Indigenous peoples, languages, and local histories, not a single timeless kingdom. For snapshots before Japanese colonial rule, this context card is intentionally cultural and geographic: a border label alone cannot identify one sovereign authority or substitute for the distinct histories of communities such as Amis, Atayal, Paiwan, Bunun, Tao, and many others.",
+    sourceLink: "https://eng.taiwan.net.tw/m1.aspx?sNo=0002023",
+    sourceLabel: "Tourism Administration, Republic of China (Taiwan), Indigenous Ceremonies",
+  },
+  {
     nameAliases: ["Polynesians"],
     title: "Polynesia: a cultural and linguistic region",
     description: "“Polynesians” describes peoples and island societies across a vast oceanic region, not one historical kingdom or empire. Political histories differ between Tonga, Sāmoa, Hawaiʻi, Tahiti, Aotearoa, and many other islands; map boundaries under this umbrella should therefore be read as broad cultural geography rather than sovereignty.",

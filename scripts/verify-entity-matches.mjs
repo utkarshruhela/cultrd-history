@@ -192,6 +192,9 @@ const EXPECTED_STILL_ONGOING = new Set([
   "modern-greek-state",
   "republic-of-burundi-modern-state",
   "state-of-qatar-modern-continuity",
+  "islamic-republic-of-iran",
+  "third-republic-of-hungary",
+  "republic-of-china-taiwan-governance",
 ]);
 const world = JSON.parse(fs.readFileSync("public/data/world.geojson", "utf8"));
 for (const feat of world.features) {

@@ -318,6 +318,15 @@ export const CIVILIZATIONS: CivilizationRegion[] = [
     yearEnd: 2026,
   },
   {
+    id: "taiwan_indigenous",
+    label: "Indigenous Taiwan",
+    note: "A grouping for the distinct Indigenous peoples and living cultural practices of Taiwan; it is not a single polity or ethnic identity.",
+    lat: 23.7,
+    lon: 121.0,
+    yearStart: -1000,
+    yearEnd: 2026,
+  },
+  {
     id: "timurid_central_asia",
     label: "Timurid Central Asia",
     note: "Persianate courtly and scholarly networks centred on Samarkand and Herat; pin is at Samarkand.",

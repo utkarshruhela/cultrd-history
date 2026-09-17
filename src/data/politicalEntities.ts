@@ -2565,7 +2565,7 @@ export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
   },
   {
     id: "safavid-empire",
-    nameAliases: ["Safavid Empire"],
+    nameAliases: ["Safavid Empire", "Iran"],
     kind: "empire",
     periodStart: 1501,
     periodEnd: 1736,
@@ -2582,7 +2582,7 @@ export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
   },
   {
     id: "qajar-persia",
-    nameAliases: ["Persia"],
+    nameAliases: ["Persia", "Iran"],
     kind: "kingdom",
     periodStart: 1789,
     periodEnd: 1925,
