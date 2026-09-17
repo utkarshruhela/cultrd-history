@@ -9,6 +9,8 @@ import { ISLAMIC_ORPHAN_LINKS } from "./expansion/islamicOrphanLinks";
 import { ABBASID_ART_LINKS } from "./expansion/abbasidArt";
 import { ABBASID_MUSIC_LINKS } from "./expansion/abbasidMusic";
 import { JOSEON_PHILOSOPHY_LINKS } from "./expansion/joseonPhilosophy";
+import { AYUTTHAYA_LINKS } from "./expansion/ayutthayaCulture";
+import { MAGHREB_LINKS } from "./expansion/maghrebCulture";
 import type { PolityCulturalLink } from "../types";
 
 /**
@@ -17,6 +19,10 @@ import type { PolityCulturalLink } from "../types";
  * honest empty state rather than inferred from a broad civilisation tag.
  */
 export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  ...AYUTTHAYA_LINKS,
+  ...MAGHREB_LINKS,
+  { polityId: "ancient-elam", culturalWorkId: "chogha-zanbil-sacred-city", relationship: "commissioned", start: -1250, end: -1250, note: "A royal foundation of Untash-Napirisha in the Middle Elamite period. This dates one documented building project, not all eras grouped under the atlas's broad Elam profile.", confidence: "high" },
+  { polityId: "joseon-dynasty-korea", culturalWorkId: "donguibogam-first-edition-1613", relationship: "commissioned", start: 1613, end: 1613, note: "The project originated in royal instructions under Seonjo; its first printing followed in 1613 under Gwanghaegun. The displayed year dates that edition, not the origin of its medical traditions.", confidence: "high" },
   ...JOSEON_PHILOSOPHY_LINKS,
   { polityId: "joseon-dynasty-korea", culturalWorkId: "hunminjeongum-haerye-1446", relationship: "commissioned", start: 1446, end: 1446, note: "Sejong's royal promulgation and the accompanying scholarly commentary were published in 1446, following completion of the alphabet in 1443.", confidence: "high" },
   { polityId: "joseon-dynasty-korea", culturalWorkId: "hwaseong-fortress-1794", relationship: "commissioned", start: 1794, end: 1796, note: "Jeongjo ordered this fortified-city project. Dates describe original construction, not the twentieth-century reconstruction of damaged sections.", confidence: "high" },

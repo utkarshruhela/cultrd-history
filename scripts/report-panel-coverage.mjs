@@ -112,6 +112,9 @@ for (const [subject, counts] of Object.entries(subjectCounts)) {
 }
 console.log(`Occurrences with all five subject categories represented: ${allSubjects}/${total}`);
 console.log("Subject gaps are research tasks, not permission to invent achievements. Even five represented categories do not prove completeness or source quality.");
+// Keep repeated progress audits readable without dropping the exhaustive
+// research backlog from the default report.
+if (process.argv.includes("--summary")) process.exit(0);
 console.log("\nprofile\tyear\tmissing subjects");
 for (const gap of [...subjectGaps.values()].sort((a, b) => b.missing.length - a.missing.length || a.id.localeCompare(b.id) || a.year - b.year)) {
   console.log(`${gap.id}\t${gap.year}\t${gap.missing.join(",")}`);

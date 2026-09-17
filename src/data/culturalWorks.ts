@@ -39,8 +39,19 @@ import { HIGH_FREQUENCY_CULTURAL_WORKS } from "./expansion/highFrequencyCulture"
 import { ABBASID_ART_WORKS } from "./expansion/abbasidArt";
 import { ABBASID_MUSIC_WORKS } from "./expansion/abbasidMusic";
 import { JOSEON_PHILOSOPHY_WORKS } from "./expansion/joseonPhilosophy";
+import { AYUTTHAYA_WORKS } from "./expansion/ayutthayaCulture";
+import { MAGHREB_WORKS } from "./expansion/maghrebCulture";
 
 export const CIVILIZATIONS: CivilizationRegion[] = [
+  {
+    id: "elam_highlands_lowlands",
+    label: "Elam: southwestern Iranian lowlands and highlands",
+    note: "A broad cultural frame, not a single continuous state; pin marks the Middle Elamite religious centre at Chogha Zanbil.",
+    lat: 32.008,
+    lon: 48.522,
+    yearStart: -3000,
+    yearEnd: -539,
+  },
   {
     id: "fiji_islands",
     label: "Fiji Islands",
@@ -428,6 +439,8 @@ export const CULTURAL_WORKS: CulturalWork[] = [
   ...ABBASID_ART_WORKS,
   ...ABBASID_MUSIC_WORKS,
   ...JOSEON_PHILOSOPHY_WORKS,
+  ...AYUTTHAYA_WORKS,
+  ...MAGHREB_WORKS,
   {
     id: "ulugh-beg-observatory",
     title: "Ulugh Beg Observatory and Zij-i Sultani",
