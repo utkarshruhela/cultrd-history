@@ -1,6 +1,7 @@
 import { colorForEntity } from "../lib/color";
 import { formatYear } from "../lib/format";
 import { findPoliticalEntity } from "../data/politicalEntities";
+import { culturalWorksForPolity } from "../data/polityCulturalLinks";
 import type { PoliticalEntityKind, PoliticalRuler } from "../types";
 import type { SelectedEntity } from "./WorldMap";
 
@@ -42,12 +43,14 @@ function formatRulerYears(r: PoliticalRuler): string {
 }
 
 interface InfoPanelProps {
+  /** The visitor's selected year, distinct from the nearest map snapshot. */
+  currentYear: number;
   activeSliceYear: number | null;
   selected: SelectedEntity | null;
   onClose: () => void;
 }
 
-export default function InfoPanel({ activeSliceYear, selected, onClose }: InfoPanelProps) {
+export default function InfoPanel({ currentYear, activeSliceYear, selected, onClose }: InfoPanelProps) {
   if (!selected) {
     return (
       <div className="info-panel info-panel-empty">
@@ -73,6 +76,7 @@ export default function InfoPanel({ activeSliceYear, selected, onClose }: InfoPa
 
   const ruledBySomeoneElse = selected.subjecto && selected.subjecto !== selected.name;
   const entity = findPoliticalEntity(selected.name, activeSliceYear);
+  const culturalWorks = entity ? culturalWorksForPolity(entity.id, currentYear) : [];
 
   return (
     <div className="info-panel">
@@ -118,6 +122,36 @@ export default function InfoPanel({ activeSliceYear, selected, onClose }: InfoPa
             ))}
           </ol>
         </div>
+      )}
+
+      {entity && (
+        <section className="info-panel-culture" aria-labelledby="culture-heading">
+          <h3 id="culture-heading">Culture & innovation</h3>
+          {culturalWorks.length > 0 ? (
+            <ul className="cultural-work-list">
+              {culturalWorks.map(({ link, work }) => (
+                <li key={`${link.polityId}-${work.id}`} className="cultural-work">
+                  <div className="cultural-work-meta">
+                    {work.domain} · {work.discipline.replaceAll("-", " ")}
+                  </div>
+                  {work.sourceLink ? (
+                    <a href={work.sourceLink} target="_blank" rel="noreferrer" className="cultural-work-title">
+                      {work.title}
+                    </a>
+                  ) : (
+                    <span className="cultural-work-title">{work.title}</span>
+                  )}
+                  <p>{link.note}</p>
+                  <span className="cultural-work-evidence">{link.relationship} · {link.confidence} confidence</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="info-panel-note">
+              No curated culture or innovation records are linked to this polity for this snapshot yet.
+            </p>
+          )}
+        </section>
       )}
 
       {selected.link && (

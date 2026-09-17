@@ -318,6 +318,57 @@
   line-height: 1.4;
 }
 
+.info-panel-culture {
+  margin: 18px 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--panel-border);
+}
+
+.info-panel-culture h3 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.cultural-work-list {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+}
+
+.cultural-work {
+  padding: 10px;
+  border: 1px solid var(--panel-border);
+  background: color-mix(in srgb, var(--panel-bg) 88%, var(--paper));
+}
+
+.cultural-work-meta,
+.cultural-work-evidence {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.cultural-work-title {
+  display: inline-block;
+  margin: 4px 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cultural-work p {
+  margin: 0 0 7px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+
 .info-panel-close {
   position: absolute;
   top: 14px;

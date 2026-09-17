@@ -46,7 +46,7 @@ export default function App() {
             });
           }}
         />
-        <InfoPanel activeSliceYear={activeSliceYear} selected={selected} onClose={() => setSelected(null)} />
+        <InfoPanel currentYear={currentYear} activeSliceYear={activeSliceYear} selected={selected} onClose={() => setSelected(null)} />
       </main>
 
       <footer className="app-footer">

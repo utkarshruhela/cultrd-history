@@ -9,7 +9,7 @@ import { execSync } from "node:child_process";
 import fs from "node:fs";
 
 const DISCIPLINES_BY_DOMAIN = {
-  arts: ["literature", "visual-art", "architecture"],
+  arts: ["literature", "visual-art", "architecture", "music-performance"],
   philosophy: ["philosophy", "religion-theology", "political-legal-thought"],
   stem: ["mathematics", "astronomy-physics", "medicine-biology", "engineering-invention"],
 };

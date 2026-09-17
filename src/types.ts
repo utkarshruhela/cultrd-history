@@ -142,7 +142,7 @@ export interface PoliticalEntityProfile {
 
 export type Domain = "arts" | "philosophy" | "stem";
 
-export type ArtsDiscipline = "literature" | "visual-art" | "architecture";
+export type ArtsDiscipline = "literature" | "visual-art" | "architecture" | "music-performance";
 export type PhilosophyDiscipline = "philosophy" | "religion-theology" | "political-legal-thought";
 export type StemDiscipline = "mathematics" | "astronomy-physics" | "medicine-biology" | "engineering-invention";
 export type Discipline = ArtsDiscipline | PhilosophyDiscipline | StemDiscipline;
@@ -192,4 +192,24 @@ export interface CulturalWork {
   license: string;
   /** Where this record's metadata was compiled from, for traceability. */
   dataSource: string;
+}
+
+/**
+ * A historically scoped connection between a map polity and a cultural work.
+ *
+ * This stays separate from `CulturalWork.civilizationId`: a cultural
+ * tradition can span many states, while a particular court may have
+ * commissioned, patronised, or transmitted a work for only part of that
+ * tradition's life.
+ */
+export interface PolityCulturalLink {
+  polityId: string;
+  culturalWorkId: string;
+  relationship: "commissioned" | "patronised" | "produced" | "transmitted";
+  start: number;
+  end: number;
+  /** A short, panel-ready explanation of the connection. */
+  note: string;
+  /** Confidence in this polity/work association, distinct from map-border precision. */
+  confidence: "high" | "medium";
 }

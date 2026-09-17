@@ -40,6 +40,24 @@ export const POLITICAL_ENTITIES: PoliticalEntityProfile[] = [
     dataSource: "Wikipedia (Mughal Empire and individual emperor articles); cross-checked reign years against standard reference timelines",
   },
   {
+    id: "qutb-shahi-sultanate",
+    nameAliases: ["Golkonda", "Golconda"],
+    kind: "sultanate",
+    periodStart: 1518,
+    periodEnd: 1687,
+    periodApprox: false,
+    description:
+      "The Qutb Shahis established an independent Deccan sultanate at Golconda in 1518 and founded Hyderabad in 1591. Their court fostered a distinctive Deccani culture shaped by Persianate, Telugu, and wider South Asian traditions, while Golconda became an important fortified city and diamond-trade centre. Mughal forces annexed the sultanate in 1687.",
+    rulers: [
+      { name: "Sultan Quli Qutb al-Mulk", reignStart: 1518, reignEnd: 1543, note: "Founder of the independent Golconda sultanate" },
+      { name: "Ibrahim Quli Qutb Shah", reignStart: 1550, reignEnd: 1580, note: "Patron of Deccani literary and artistic culture" },
+      { name: "Muhammad Quli Qutb Shah", reignStart: 1580, reignEnd: 1612, note: "Founded Hyderabad and commissioned the Charminar" },
+      { name: "Abul Hasan Qutb Shah", reignStart: 1672, reignEnd: 1687, note: "Last ruler; deposed in the Mughal conquest" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "UNESCO World Heritage Centre, Qutb Shahi Monuments of Hyderabad tentative-list documentation",
+  },
+  {
     id: "ottoman-empire",
     nameAliases: ["Ottoman Empire", "Ottoman Sultanate"],
     kind: "empire",
@@ -3044,7 +3062,10 @@ for (const entity of POLITICAL_ENTITIES) {
  */
 export function findPoliticalEntity(name: string | null, activeSliceYear: number | null): PoliticalEntityProfile | undefined {
   if (!name) return undefined;
-  const entity = BY_NAME.get(name);
+  // GeoJSON labels are external data. Normalise insignificant surrounding
+  // whitespace so an otherwise exact curated alias cannot silently fall back
+  // to the sparse panel.
+  const entity = BY_NAME.get(name.trim());
   if (!entity) return undefined;
   if (activeSliceYear === null) {
     const now = new Date().getFullYear();
