@@ -8,15 +8,17 @@ import path from "node:path";
 
 const outputDir = "/tmp/historyflow-panel-report";
 execSync(
-  `npx tsc --module commonjs --target es2020 --outDir ${outputDir} --ignoreConfig src/data/politicalEntities.ts src/types.ts`,
+  `npx tsc --module commonjs --target es2020 --outDir ${outputDir} --ignoreConfig src/data/politicalEntities.ts src/data/mapLabelContexts.ts src/types.ts`,
   { stdio: "inherit" },
 );
 const { findPoliticalEntity } = await import(`${outputDir}/data/politicalEntities.js`);
+const { findMapLabelContext } = await import(`${outputDir}/data/mapLabelContexts.js`);
 
 const mapDir = "public/data/historical";
 const fallback = new Map();
 let total = 0;
 let curated = 0;
+let contextualized = 0;
 
 for (const file of fs.readdirSync(mapDir)) {
   if (!file.endsWith(".geojson")) continue;
@@ -31,6 +33,10 @@ for (const file of fs.readdirSync(mapDir)) {
       curated++;
       continue;
     }
+    if (findMapLabelContext(name)) {
+      contextualized++;
+      continue;
+    }
     const entry = fallback.get(name) ?? { count: 0, years: new Set() };
     entry.count++;
     entry.years.add(year);
@@ -38,8 +44,10 @@ for (const file of fs.readdirSync(mapDir)) {
   }
 }
 
-console.log(`Curated historical feature occurrences: ${curated}/${total} (${Math.round((curated / total) * 100)}%)`);
-console.log(`Fallback labels: ${fallback.size}`);
+console.log(`Political-profile occurrences: ${curated}/${total} (${Math.round((curated / total) * 100)}%)`);
+console.log(`Sourced regional-context occurrences: ${contextualized}/${total} (${Math.round((contextualized / total) * 100)}%)`);
+console.log(`Panels with a curated profile or context card: ${curated + contextualized}/${total} (${Math.round(((curated + contextualized) / total) * 100)}%)`);
+console.log(`Still-generic fallback labels: ${fallback.size}`);
 console.log("\ncount\tlabel\tsnapshot years");
 for (const [label, entry] of [...fallback.entries()].sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0]))) {
   console.log(`${entry.count}\t${label}\t${[...entry.years].sort((a, b) => a - b).join(",")}`);
