@@ -8,6 +8,7 @@ import { AFRICAN_ORPHAN_LINKS } from "./expansion/africanOrphanLinks";
 import { ISLAMIC_ORPHAN_LINKS } from "./expansion/islamicOrphanLinks";
 import { ABBASID_ART_LINKS } from "./expansion/abbasidArt";
 import { ABBASID_MUSIC_LINKS } from "./expansion/abbasidMusic";
+import { JOSEON_PHILOSOPHY_LINKS } from "./expansion/joseonPhilosophy";
 import type { PolityCulturalLink } from "../types";
 
 /**
@@ -16,6 +17,10 @@ import type { PolityCulturalLink } from "../types";
  * honest empty state rather than inferred from a broad civilisation tag.
  */
 export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  ...JOSEON_PHILOSOPHY_LINKS,
+  { polityId: "joseon-dynasty-korea", culturalWorkId: "hunminjeongum-haerye-1446", relationship: "commissioned", start: 1446, end: 1446, note: "Sejong's royal promulgation and the accompanying scholarly commentary were published in 1446, following completion of the alphabet in 1443.", confidence: "high" },
+  { polityId: "joseon-dynasty-korea", culturalWorkId: "hwaseong-fortress-1794", relationship: "commissioned", start: 1794, end: 1796, note: "Jeongjo ordered this fortified-city project. Dates describe original construction, not the twentieth-century reconstruction of damaged sections.", confidence: "high" },
+  { polityId: "joseon-dynasty-korea", culturalWorkId: "jongmyo-ritual-music-1464", relationship: "patronised", start: 1464, end: 1464, note: "King Sejo's court adopted these suites for royal ancestral worship in 1464. The association dates this documented ritual adoption, not every component's composition or the later UNESCO designation.", confidence: "high" },
   { polityId: "imperial-japan-yamato-heian", culturalWorkId: "heian-gagaku-court-music", relationship: "patronised", start: 901, end: 1000, note: "Gagaku's tenth-century development took place under imperial patronage in Heian Japan. Its repertoire incorporates multiple Asian traditions and cannot be attributed to a single ruler or inventor.", confidence: "high" },
   { polityId: "fiji-colony-and-independent-state", culturalWorkId: "levuka-port-town", relationship: "produced", start: 1874, end: 1900, note: "This link covers Levuka's continuing development after Fiji became a colony in 1874. The port began earlier, and its local communities were participants rather than a blank setting for colonial construction.", confidence: "high" },
   { polityId: "swiss-confederation-continuity", culturalWorkId: "special-relativity", relationship: "produced", start: 1905, end: 1905, note: "Einstein developed his 1905 relativity work while living in Bern and employed by the Swiss Patent Office. This locates his independent scholarship; it was not a Swiss government commission.", confidence: "high" },

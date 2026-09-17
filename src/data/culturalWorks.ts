@@ -38,6 +38,7 @@ import { MODERN_GLOBAL_WORKS } from "./expansion/modernGlobal";
 import { HIGH_FREQUENCY_CULTURAL_WORKS } from "./expansion/highFrequencyCulture";
 import { ABBASID_ART_WORKS } from "./expansion/abbasidArt";
 import { ABBASID_MUSIC_WORKS } from "./expansion/abbasidMusic";
+import { JOSEON_PHILOSOPHY_WORKS } from "./expansion/joseonPhilosophy";
 
 export const CIVILIZATIONS: CivilizationRegion[] = [
   {
@@ -426,6 +427,7 @@ export const CULTURAL_WORKS: CulturalWork[] = [
   ...HIGH_FREQUENCY_CULTURAL_WORKS,
   ...ABBASID_ART_WORKS,
   ...ABBASID_MUSIC_WORKS,
+  ...JOSEON_PHILOSOPHY_WORKS,
   {
     id: "ulugh-beg-observatory",
     title: "Ulugh Beg Observatory and Zij-i Sultani",
