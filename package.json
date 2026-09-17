@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "validate:panel-data": "node scripts/validate-panel-data.mjs",
+    "report:panel-coverage": "node scripts/report-panel-coverage.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
