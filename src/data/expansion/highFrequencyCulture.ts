@@ -3,6 +3,21 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "gabrieli-sacrae-symphoniae",
+    title: "Sacrae symphoniae: music for separated ensembles",
+    creator: "Giovanni Gabrieli",
+    domain: "arts",
+    discipline: "music-performance",
+    subForm: "Venetian polychoral and instrumental music",
+    yearStart: 1597,
+    yearApprox: false,
+    civilizationId: "medieval_renaissance_europe",
+    description: "Gabrieli's 1597 collection develops music through exchanges between distinct vocal and instrumental groups. His work at Venice's San Marco connected composition with the spacing of performers in the basilica, making contrasting sonorities and musical dialogue central to the listening experience.",
+    sourceLink: "https://blogs.loc.gov/music/files/2013/10/Founders-Day-10.28.CC-FINAL.pdf",
+    license: "Public domain compositions; original summary",
+    dataSource: "Library of Congress, Founder's Day concert programme, 28 October 2013, page 6; Music History from Primary Sources.",
+  },
+  {
     id: "vasa-shipbuilding",
     title: "Vasa: shipbuilding and a stability failure",
     creator: null,
@@ -1509,6 +1524,7 @@ export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
 ];
 
 export const HIGH_FREQUENCY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "republic-of-venice", culturalWorkId: "gabrieli-sacrae-symphoniae", relationship: "produced", start: 1597, end: 1597, note: "Gabrieli served at San Marco in the Venetian Republic; this collection records the city's ecclesiastical and instrumental musical culture.", confidence: "high" },
   { polityId: "kingdom-of-sweden-continuity", culturalWorkId: "vasa-shipbuilding", relationship: "commissioned", start: 1626, end: 1628, note: "Gustav II Adolf commissioned Vasa in 1625; this link dates its construction and records its failure as part of engineering history.", confidence: "high" },
   { polityId: "kingdom-of-sweden-continuity", culturalWorkId: "linnaeus-species-plantarum", relationship: "produced", start: 1753, end: 1753, note: "The Swedish botanist's publication belongs to Sweden's eighteenth-century scholarly setting and international botanical networks; no royal commission is asserted.", confidence: "high" },
   { polityId: "kingdom-of-italy-1861-1946", culturalWorkId: "ivrea-olivetti-industrial-city", relationship: "produced", start: 1930, end: 1946, note: "Ivrea's early modern industrial development took place during the kingdom; the project was corporate and architectural rather than a royal commission.", confidence: "high" },
