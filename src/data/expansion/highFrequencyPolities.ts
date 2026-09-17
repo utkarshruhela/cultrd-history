@@ -8,6 +8,35 @@ import type { PoliticalEntityProfile } from "../../types";
  */
 export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
   {
+    id: "jolof-empire-senegambia",
+    nameAliases: ["Senegal"],
+    kind: "confederacy",
+    periodStart: 1350,
+    periodEnd: 1549,
+    periodApprox: true,
+    description: "Jolof was a Wolof-centred imperial or confederate polity in Senegambia, traditionally associated with Ndiadiane Ndiaye. It fragmented into several successor kingdoms in the sixteenth century; the modern Senegal label is used here only as a map-search alias, not as a claim that Jolof was a modern Senegalese nation-state.",
+    rulers: [
+      { name: "Ndiadiane Ndiaye", reignStart: 1350, reignApprox: true, note: "Traditional founder; chronology is uncertain" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Senegal Ministry of Culture, History",
+  },
+  {
+    id: "republic-of-senegal",
+    nameAliases: ["Senegal"],
+    kind: "republic",
+    periodStart: 1960,
+    periodEnd: 2026,
+    periodApprox: false,
+    description: "Senegal became independent in 1960 after the brief Mali Federation. The republic's postcolonial institutions and constitutional revisions are distinct from the many precolonial Senegambian states; this profile does not project the modern border backward in time.",
+    rulers: [
+      { name: "Léopold Sédar Senghor", reignStart: 1960, reignEnd: 1980, note: "First president of independent Senegal" },
+      { name: "Abdou Diouf", reignStart: 1981, reignEnd: 2000, note: "President during constitutional and political liberalisation" },
+    ],
+    license: "Public domain (historical facts)",
+    dataSource: "Archives du Sénégal, post-independence government records; Government of Senegal constitutional history",
+  },
+  {
     id: "british-honduras-belize",
     nameAliases: ["Belize"],
     kind: "other",
