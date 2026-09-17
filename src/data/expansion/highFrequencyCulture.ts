@@ -3,6 +3,22 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "al-kindi-first-philosophy",
+    title: "On First Philosophy",
+    creator: "Al-Kindi",
+    domain: "philosophy",
+    discipline: "philosophy",
+    subForm: "metaphysical treatise",
+    yearStart: 833,
+    yearEnd: 842,
+    yearApprox: true,
+    civilizationId: "islamic_golden_age",
+    description: "Al-Kindi's partly surviving treatise examines the world's beginning and the unity of its first cause, drawing on Greek philosophical works available in Arabic. It was dedicated to the caliph al-Mu'tasim. The approximate date range follows that patron's reign, not a documented publication year.",
+    sourceLink: "https://plato.stanford.edu/entries/al-kindi/",
+    license: "Historical facts; original summary",
+    dataSource: "Stanford Encyclopedia of Philosophy, al-Kindi, sections 1 and 3",
+  },
+  {
     id: "baghdad-round-city",
     title: "Baghdad's Round City (Madinat al-Salam)",
     creator: "Commissioned by the caliph al-Mansur",
