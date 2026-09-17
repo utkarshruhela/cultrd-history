@@ -170,6 +170,27 @@ export const MAP_LABEL_CONTEXTS: MapLabelContext[] = [
     sourceLink: "https://whc.unesco.org/en/list/715/",
     sourceLabel: "UNESCO World Heritage Centre, Rapa Nui National Park",
   },
+  {
+    nameAliases: ["Maori"],
+    title: "Māori: tangata whenua of Aotearoa",
+    description: "Māori are the Indigenous peoples of Aotearoa New Zealand, with distinct iwi and hapū histories, oral traditions, artistic practices, and systems of authority. “Maori” on a historical map is not the name of one centralized kingdom; it should be interpreted as cultural and territorial geography rather than a single sovereign border.",
+    sourceLink: "https://teara.govt.nz/en/maori",
+    sourceLabel: "Te Ara — The Encyclopedia of New Zealand, Māori",
+  },
+  {
+    nameAliases: ["Minang"],
+    title: "Minangkabau: a people and cultural region",
+    description: "Minang is a map shorthand for Minangkabau communities of West Sumatra, whose social organization, customary law, architecture, arts, and matrilineal traditions have their own histories. It does not identify one empire or a single ruler; the polygon should be read as a cultural region rather than a unitary state.",
+    sourceLink: "https://whc.unesco.org/en/tentativelists/6059/",
+    sourceLabel: "UNESCO Tentative Lists, Traditional Settlement at Nagari Sijunjung",
+  },
+  {
+    nameAliases: ["Malaya"],
+    title: "Malaya: a changing regional and colonial term",
+    description: "Malaya has been used for a peninsula and for shifting political arrangements, including Malay sultanates, British colonial territories, and the Federation of Malaya before the formation of Malaysia. A bare map label cannot be honestly turned into one continuous state or ruler list across all its snapshots.",
+    sourceLink: "https://www.nas.gov.sg/archivesonline/data/pdfdoc/lky19600119a.pdf",
+    sourceLabel: "National Archives of Singapore, historical record on Malaya and regional colonial boundaries",
+  },
 ];
 
 const BY_NAME = new Map<string, MapLabelContext>();
