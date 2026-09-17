@@ -1044,7 +1044,7 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "islamic_golden_age",
     description:
       "Once the largest mosque in the world, built in Samarra, Iraq, and known for its distinctive spiral minaret (the Malwiya). Heavily damaged in 2005 during the Iraq War, though the minaret survived.",
-    sourceLink: "https://en.wikipedia.org/wiki/Great_Mosque_of_Samarra",
+    sourceLink: "https://whc.unesco.org/en/list/276",
     license: "Public domain (historic monument)",
     dataSource: "General historical/architectural consensus",
   },
@@ -1765,11 +1765,11 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     discipline: "astronomy-physics",
     subForm: "optics/physics treatise",
     yearStart: 1021,
-    yearApprox: false,
+    yearApprox: true,
     civilizationId: "islamic_golden_age",
     description:
       "A seven-volume work that correctly argued vision works by light entering the eye (overturning the older Greek theory that the eye emits rays), grounded in controlled experiment rather than pure theory -- a methodology later historians of science have credited as an early form of the scientific method.",
-    sourceLink: "https://en.wikipedia.org/wiki/Book_of_Optics",
+    sourceLink: "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/",
     license: "Public domain (ancient text)",
     dataSource: "General history-of-science consensus",
   },
@@ -1878,10 +1878,10 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     yearApprox: true,
     civilizationId: "zimbabwe_kingdom",
     description:
-      "Bloomery iron smelting, along with gold and copper working, that underwrote Great Zimbabwe's wealth as a trading power -- iron tools and gold/copper goods moved through a trade network reaching the Swahili coast and, from there, into Indian Ocean trade as far as China.",
-    sourceLink: "https://en.wikipedia.org/wiki/Great_Zimbabwe#Economy",
+      "Archaeological study of Great Zimbabwe identifies iron, copper, and gold working by residents across the settlement, including household-scale production. Local and regional metal supplies also supported exchange with the Indian Ocean world. This records an established craft tradition, not an invention attributed to a particular king.",
+    sourceLink: "https://doi.org/10.1111/arcm.12248",
     license: "Public domain (archaeological/historical knowledge)",
-    dataSource: "General archaeological consensus (southern African Iron Age)",
+    dataSource: "Bandama, Moffett, Thondhlana and Chirikure (2016), Archaeometry 58(S1), 161–181",
   },
 
   // --- Ife (Yoruba civilization) ---
@@ -2000,15 +2000,15 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     domain: "stem",
     discipline: "mathematics",
     subForm: "mathematics treatises",
-    yearStart: 1670,
+    yearStart: 1674,
     yearEnd: 1708,
     yearApprox: true,
     civilizationId: "japan_classical",
     description:
-      "Working within Japan's indigenous \"wasan\" mathematical tradition, largely isolated from contemporary European mathematics, Seki developed a determinant-like method for solving simultaneous equations and explored calculus-adjacent techniques around the same time Newton and Leibniz were developing calculus in Europe -- independently, not in contact with either.",
-    sourceLink: "https://en.wikipedia.org/wiki/Seki_Takakazu",
+      "Seki's Hatsubi Sampo appeared in 1674; his later work examined elimination methods, determinants, and numerical equations. His scholarship developed within Japanese wasan and drew on Chinese mathematical books. The date range represents a scholarly career, not the simultaneous publication of all these results.",
+    sourceLink: "https://mathshistory.st-andrews.ac.uk/Biographies/Seki/",
     license: "Public domain (historical text)",
-    dataSource: "General history-of-mathematics consensus",
+    dataSource: "University of St Andrews, MacTutor: Takakazu Shinsuke Seki",
   },
   {
     id: "tatara-ironmaking",

@@ -4,6 +4,8 @@ import { ANCIENT_MEDITERRANEAN_LINKS } from "./expansion/ancientMediterranean";
 import { HIGH_FREQUENCY_CULTURAL_LINKS } from "./expansion/highFrequencyCulture";
 import { MESOPOTAMIA_CULTURAL_LINKS } from "./expansion/mesopotamiaLinks";
 import { CLASSICAL_CULTURAL_LINKS } from "./expansion/classicalLinks";
+import { AFRICAN_ORPHAN_LINKS } from "./expansion/africanOrphanLinks";
+import { ISLAMIC_ORPHAN_LINKS } from "./expansion/islamicOrphanLinks";
 import type { PolityCulturalLink } from "../types";
 
 /**
@@ -12,6 +14,7 @@ import type { PolityCulturalLink } from "../types";
  * honest empty state rather than inferred from a broad civilisation tag.
  */
 export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "japan-shogunate-era", culturalWorkId: "seki-takakazu-wasan", relationship: "produced", start: 1674, end: 1708, note: "Seki worked in Tokugawa Japan, serving the lord of Koshu and later the shogun's household. This scholarly-production link does not claim an official commission for his mathematical treatises.", confidence: "high" },
   { polityId: "khmer-empire", culturalWorkId: "bayon-faces", relationship: "commissioned", start: 1181, end: 1220, note: "Bayon's construction belongs to Jayavarman VII's Angkorian building programme. The approximate span describes the late twelfth- and early thirteenth-century temple, not a securely dated carving of every face.", confidence: "high" },
   { polityId: "khmer-empire-map-cambodia", culturalWorkId: "bayon-faces", relationship: "commissioned", start: 1181, end: 1220, note: "The Cambodia map label denotes Angkorian rule in this profile; Jayavarman VII's Bayon belongs to the same Khmer polity, not the modern Cambodian state.", confidence: "high" },
   { polityId: "imperial-japan-yamato-heian", culturalWorkId: "pillow-book", relationship: "produced", start: 1002, end: 1002, note: "Sei Shonagon's observations belong to Heian imperial court life; the approximate date is not evidence of a royal commission.", confidence: "high" },
@@ -36,6 +39,8 @@ export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
   ...GLOBAL_CULTURAL_LINKS,
   ...MESOPOTAMIA_CULTURAL_LINKS,
   ...CLASSICAL_CULTURAL_LINKS,
+  ...AFRICAN_ORPHAN_LINKS,
+  ...ISLAMIC_ORPHAN_LINKS,
   ...ANCIENT_MEDITERRANEAN_LINKS,
   ...HIGH_FREQUENCY_CULTURAL_LINKS,
   {
