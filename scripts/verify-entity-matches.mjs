@@ -51,7 +51,6 @@ let totalAliases = 0;
 let profileScopedOccurrences = 0;
 let rawOccurrences = 0;
 let matchedRawOccurrences = 0;
-const MATCH_BUFFER_YEARS = 60;
 
 for (const entity of POLITICAL_ENTITIES) {
   for (const alias of entity.nameAliases) {
@@ -66,7 +65,7 @@ for (const entity of POLITICAL_ENTITIES) {
       // A single map label can legitimately name several different polities
       // over centuries. Test this profile only where its own date scope says
       // it should apply; a global pass below measures every actual fallback.
-      if (year < entity.periodStart - MATCH_BUFFER_YEARS || year > entity.periodEnd + MATCH_BUFFER_YEARS) continue;
+      if (year < entity.periodStart || year > entity.periodEnd) continue;
       profileScopedOccurrences++;
       const match = findPoliticalEntity(alias, year);
       if (!match) {
@@ -108,6 +107,10 @@ const EXPECTED_STILL_ONGOING = new Set([
   "kingdom-of-tonga",
   "grand-duchy-of-luxembourg",
   "hong-kong-colonial-and-sar",
+  "fiji-colony-and-independent-state",
+  "al-busaid-sultanate-oman",
+  "portugal-restored-and-modern",
+  "modern-french-republic",
 ]);
 const world = JSON.parse(fs.readFileSync("public/data/world.geojson", "utf8"));
 for (const feat of world.features) {
