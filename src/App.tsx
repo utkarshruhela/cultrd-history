@@ -13,11 +13,24 @@ export default function App() {
 
   return (
     <div className="app">
+      <nav className="site-nav" aria-label="Site navigation">
+        <a className="site-mark" href="https://www.utkarshruhela.com/" aria-label="Utkarsh Ruhela, home">UTK</a>
+        <a className="site-section" href="https://www.utkarshruhela.com/">HOME</a>
+        <span className="site-current">HISTORY</span>
+        <span className="site-status">ARCHIVE_002</span>
+      </nav>
+
       <header className="app-header">
-        <h1>CULTRD HISTORY</h1>
-        <span className="app-tagline">who ruled whom, where — click the map, scrub the timeline</span>
+        <div className="app-title-block">
+          <span className="app-kicker">PERSONAL_ARCHIVE / CULTURAL_ATLAS</span>
+          <h1>CULTRD <em>HISTORY</em></h1>
+        </div>
+        <div className="app-context">
+          <span className="app-tagline">WHO RULED WHOM, WHERE</span>
+          <span className="app-instruction">CLICK THE MAP / SCRUB THE TIMELINE</span>
+        </div>
         {activeSliceYear !== null && (
-          <span className="app-slice-note">showing boundaries as of {formatYear(activeSliceYear)}</span>
+          <span className="app-slice-note">BOUNDARIES AS OF {formatYear(activeSliceYear)}</span>
         )}
       </header>
 

@@ -1,13 +1,20 @@
-:root {
-  --bg: #0b0d12;
-  --panel-bg: #12151c;
-  --panel-border: #262b38;
-  --text: #d7dae0;
-  --text-dim: #8a92a3;
-  --text-h: #f4f6fa;
-  --accent: #e0b04c;
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
-  font: 16px/1.45 system-ui, "Segoe UI", Roboto, sans-serif;
+:root {
+  --ink: #050505;
+  --paper: #efefeb;
+  --acid: #efff17;
+  --line: rgba(239, 239, 235, 0.28);
+  --muted: rgba(239, 239, 235, 0.58);
+  --bg: var(--ink);
+  --panel-bg: var(--ink);
+  --panel-border: var(--line);
+  --text: var(--paper);
+  --text-dim: var(--muted);
+  --text-h: var(--paper);
+  --accent: var(--acid);
+
+  font: 500 16px/1.45 Archivo, Arial, Helvetica, sans-serif;
   color-scheme: dark;
   color: var(--text);
   background: var(--bg);
@@ -31,6 +38,11 @@ body,
 h1,
 h2 {
   color: var(--text-h);
-  font-weight: 600;
+  font-family: "Archivo Black", Archivo, Arial, sans-serif;
+  font-weight: 400;
   margin: 0;
+}
+
+a {
+  color: inherit;
 }

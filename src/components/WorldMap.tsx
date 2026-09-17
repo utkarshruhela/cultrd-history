@@ -23,8 +23,8 @@ function styleFor(feature: Feature<Geometry, EntityProps> | undefined, selectedN
   return {
     fillColor,
     fillOpacity: 0.82,
-    color: isSelected ? "#ffffff" : "#0d0f14",
-    weight: isSelected ? 2 : 0.6,
+    color: isSelected ? "#efff17" : "#050505",
+    weight: isSelected ? 2.5 : 0.7,
   };
 }
 
@@ -64,10 +64,10 @@ function BaseWorldLayer() {
     const layer = L.geoJSON(data, {
       interactive: false,
       style: {
-        fillColor: "#c7c9cd",
+        fillColor: "#efefeb",
         fillOpacity: 1,
-        color: "#0a0a0a",
-        weight: 0.6,
+        color: "#050505",
+        weight: 0.7,
       },
     }).addTo(map);
     layer.bringToBack();
@@ -129,7 +129,7 @@ function ModernBordersLayer({ bringToFrontKey }: ModernBordersLayerProps) {
       interactive: false,
       style: {
         fillOpacity: 0,
-        color: "#0a0a0a",
+        color: "#050505",
         weight: 1,
         opacity: 0.85,
       },
@@ -175,7 +175,7 @@ function GeoJsonLayer({ slice, selectedName, onSelect }: GeoJsonLayerProps) {
         const props = feature.properties as EntityProps;
         lyr.on({
           mouseover: (e) => {
-            (e.target as L.Path).setStyle({ weight: 2, color: "#ffffff" });
+            (e.target as L.Path).setStyle({ weight: 2.5, color: "#efff17" });
             (e.target as L.Path).bringToFront();
           },
           mouseout: (e) => {
