@@ -3,6 +3,23 @@ import type { CulturalWork, PolityCulturalLink } from "../../types";
 /** Representative, source-led works for frequently selected map polities. */
 export const HIGH_FREQUENCY_CULTURAL_WORKS: CulturalWork[] = [
   {
+    id: "heian-gagaku-court-music",
+    title: "Gagaku: Heian court music and dance",
+    creator: null,
+    attribution: "Generations of court musicians and dancers",
+    domain: "arts",
+    discipline: "music-performance",
+    subForm: "court instrumental, vocal, and dance traditions",
+    yearStart: 901,
+    yearEnd: 1000,
+    yearApprox: true,
+    civilizationId: "japan_classical",
+    description: "Gagaku combined older Japanese songs and dances with continental Asian repertories adapted by Japanese performers. The Imperial Household Agency places the formation of its artistic form around the tenth century. These dates mark a formative period, not one composition or the beginning of all its constituent traditions; gagaku remains a living practice.",
+    sourceLink: "https://www.kunaicho.go.jp/en/learn/culture/gagaku.html",
+    license: "Historical facts; original summary; living performance tradition",
+    dataSource: "Imperial Household Agency, Gagaku; UNESCO Intangible Cultural Heritage, Gagaku (00265): https://ich.unesco.org/en/RL/gagaku-00265",
+  },
+  {
     id: "levuka-port-town",
     title: "Levuka's port-town architecture",
     creator: null,
