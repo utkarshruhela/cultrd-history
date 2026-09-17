@@ -1,6 +1,7 @@
 import { colorForEntity } from "../lib/color";
 import { formatYear } from "../lib/format";
 import { findPoliticalEntity } from "../data/politicalEntities";
+import { findMapLabelContext } from "../data/mapLabelContexts";
 import { culturalWorksForPolity } from "../data/polityCulturalLinks";
 import type { PoliticalEntityKind, PoliticalRuler } from "../types";
 import type { SelectedEntity } from "./WorldMap";
@@ -76,6 +77,7 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
 
   const ruledBySomeoneElse = selected.subjecto && selected.subjecto !== selected.name;
   const entity = findPoliticalEntity(selected.name, activeSliceYear);
+  const context = entity ? undefined : findMapLabelContext(selected.name);
   const culturalWorks = entity ? culturalWorksForPolity(entity.id, currentYear) : [];
 
   return (
@@ -104,7 +106,17 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
 
       {entity && <p className="info-panel-description">{entity.description}</p>}
 
-      {!entity && (
+      {context && (
+        <section className="info-panel-map-record" aria-labelledby="regional-context-heading">
+          <h3 id="regional-context-heading">Regional context</h3>
+          <p>{context.description}</p>
+          <a href={context.sourceLink} target="_blank" rel="noreferrer">
+            {context.sourceLabel} ↗
+          </a>
+        </section>
+      )}
+
+      {!entity && !context && (
         <section className="info-panel-map-record" aria-labelledby="map-record-heading">
           <h3 id="map-record-heading">Map record</h3>
           <p>

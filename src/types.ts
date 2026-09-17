@@ -102,6 +102,18 @@ export interface PoliticalEntityProfile {
   dataSource: string;
 }
 
+/**
+ * An honest sidebar treatment for a map label that denotes a people, region,
+ * or loose historical category rather than a dateable sovereign polity.
+ */
+export interface MapLabelContext {
+  nameAliases: string[];
+  title: string;
+  description: string;
+  sourceLink: string;
+  sourceLabel: string;
+}
+
 // --- CULTRD HISTORY: cultural works (arts / philosophy / STEM) ---
 //
 // This is a separate, looser-coupled layer from the political map above.
