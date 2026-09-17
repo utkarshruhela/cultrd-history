@@ -10,6 +10,9 @@ import type { PolityCulturalLink } from "../types";
  * honest empty state rather than inferred from a broad civilisation tag.
  */
 export const POLITY_CULTURAL_LINKS: PolityCulturalLink[] = [
+  { polityId: "ancient-egypt", culturalWorkId: "great-pyramid-giza", relationship: "commissioned", start: -2560, end: -2560, note: "Khufu's royal pyramid belongs to the Fourth Dynasty of Egypt's Old Kingdom; the displayed date is approximate.", confidence: "high" },
+  { polityId: "ancient-egypt", culturalWorkId: "bust-of-nefertiti", relationship: "produced", start: -1340, end: -1340, note: "The painted royal portrait was made in the Amarna period and recovered from Thutmose's workshop; attribution to the individual sculptor is not certain.", confidence: "high" },
+  { polityId: "ancient-egypt", culturalWorkId: "rhind-papyrus", relationship: "produced", start: -1550, end: -1550, note: "Ahmose copied this mathematical text under the Hyksos king Apophis. This link uses the atlas's broad ancient-Egypt profile, not a claim of unified native rule or royal commission.", confidence: "high" },
   { polityId: "mughal-empire", culturalWorkId: "humayuns-tomb", relationship: "patronised", start: 1560, end: 1570, note: "The garden-tomb was constructed under Akbar's patronage during the 1560s; the dates are approximate.", confidence: "high" },
   { polityId: "mughal-empire", culturalWorkId: "fatehpur-sikri", relationship: "commissioned", start: 1571, end: 1585, note: "Akbar commissioned the planned city and used it as his capital; the range includes construction and its period as the imperial seat.", confidence: "high" },
   {

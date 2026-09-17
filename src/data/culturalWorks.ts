@@ -685,9 +685,9 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "egypt",
     description:
       "The oldest and largest of the three Giza pyramids, and the only surviving structure of the traditional Seven Wonders of the Ancient World. It held the record for tallest man-made structure for roughly 3,800 years.",
-    sourceLink: "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+    sourceLink: "https://whc.unesco.org/en/list/86",
     license: "Public domain (ancient monument)",
-    dataSource: "General Egyptological consensus",
+    dataSource: "UNESCO World Heritage Centre: Memphis and its Necropolis",
   },
   {
     id: "bust-of-nefertiti",
@@ -696,12 +696,12 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     domain: "arts",
     discipline: "visual-art",
     subForm: "painted limestone/stucco bust",
-    yearStart: -1345,
+    yearStart: -1340,
     yearApprox: true,
     civilizationId: "egypt",
     description:
       "A painted bust of Queen Nefertiti found in 1912 in the workshop of the sculptor Thutmose at Amarna, and now one of the most reproduced images of the ancient world. It has been the subject of a long-running repatriation dispute between Germany, where it is held, and Egypt.",
-    sourceLink: "https://en.wikipedia.org/wiki/Bust_of_Nefertiti",
+    sourceLink: "https://www.smb.museum/en/museums-institutions/aegyptisches-museum-und-papyrussammlung/collection-research/bust-of-nefertiti/",
     license: "Public domain (ancient artifact); photos restricted by Neues Museum",
     dataSource: "Neues Museum Berlin records",
   },
@@ -1492,10 +1492,10 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     yearApprox: true,
     civilizationId: "egypt",
     description:
-      "A scribal copy (the scribe Ahmes names himself) of an older text, containing some 84 worked problems covering fractions, area, volume, and simple algebra -- the best single window into how Egyptian mathematics was actually practiced. Its treatment of unit fractions is distinctively Egyptian and shows up nowhere else in the ancient world in quite the same form.",
-    sourceLink: "https://en.wikipedia.org/wiki/Rhind_Mathematical_Papyrus",
+      "Copied by the scribe Ahmose from an older text, this papyrus contains 84 mathematical problems involving fractions, multiplication, areas, and volumes. Its colophon dates the copy to year 33 of the Hyksos king Apophis, providing evidence of Egyptian scribal mathematics during the Second Intermediate Period.",
+    sourceLink: "https://www.britishmuseum.org/collection/object/Y_EA10057",
     license: "Public domain (ancient artifact); British Museum photo policy applies to photos",
-    dataSource: "British Museum records; general history-of-mathematics consensus",
+    dataSource: "British Museum collection record EA10057",
   },
   {
     id: "edwin-smith-papyrus",
