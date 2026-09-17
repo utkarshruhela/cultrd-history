@@ -118,17 +118,23 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
 
       {!entity && !context && (
         <section className="info-panel-map-record" aria-labelledby="map-record-heading">
-          <h3 id="map-record-heading">Map record</h3>
+          <h3 id="map-record-heading">Snapshot record · curation pending</h3>
           <p>
-            This entity is identified by the historical-boundaries source for the displayed snapshot. A full curated
-            profile has not yet been linked to this exact map label.
+            This exact label appears in the {activeSliceYear === null ? "modern political map" : `${formatYear(activeSliceYear)} historical`} map
+            data. It has not yet passed the evidence threshold for a date-bound polity profile or regional-context
+            card, so the map must not be read as a verified ruler list.
           </p>
+          <dl className="info-panel-record-fields">
+            <div><dt>Map label</dt><dd>{selected.name}</dd></div>
+            <div><dt>Map snapshot</dt><dd>{activeSliceYear === null ? "Modern political map" : formatYear(activeSliceYear)}</dd></div>
+            <div><dt>Recorded relationship</dt><dd>{ruledBySomeoneElse ? `Ruled by ${selected.subjecto}` : "Independent / self-ruled"}</dd></div>
+          </dl>
           <a
-            href={`https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(selected.name)}`}
+            href="https://github.com/aourednik/historical-basemaps"
             target="_blank"
             rel="noreferrer"
           >
-            Research {selected.name} ↗
+            Inspect the map-source project ↗
           </a>
         </section>
       )}

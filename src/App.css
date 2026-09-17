@@ -272,6 +272,31 @@
   line-height: 1.45;
 }
 
+.info-panel-record-fields {
+  display: grid;
+  gap: 6px;
+  margin: 10px 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+}
+
+.info-panel-record-fields div {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.info-panel-record-fields dt {
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-panel-record-fields dd {
+  margin: 0;
+  color: var(--text);
+}
+
 .info-panel-rulers {
   margin: 18px 0;
   padding-top: 14px;
