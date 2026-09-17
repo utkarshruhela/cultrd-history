@@ -408,6 +408,70 @@
   font-weight: 700;
 }
 
+.wikipedia-summary {
+  margin: 4px 0 8px;
+}
+
+.wikipedia-summary-trigger {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.wikipedia-summary-trigger:hover,
+.wikipedia-summary-trigger:focus-visible {
+  color: var(--text-h);
+}
+
+.wikipedia-summary-trigger:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wikipedia-summary-toggle {
+  flex: 0 0 auto;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.wikipedia-summary-body {
+  margin-top: 8px;
+  padding: 9px 10px 10px;
+  border-left: 2px solid var(--accent);
+  background: color-mix(in srgb, var(--panel-bg) 78%, var(--paper));
+}
+
+.wikipedia-summary-body p {
+  margin: 0 0 7px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.wikipedia-summary-status {
+  color: var(--text-dim);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.wikipedia-summary-source {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
 .cultural-work p {
   margin: 0 0 7px;
   font-size: 12px;

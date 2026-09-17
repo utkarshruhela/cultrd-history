@@ -1,10 +1,12 @@
 import { colorForEntity } from "../lib/color";
 import { formatYear } from "../lib/format";
+import { isWikipediaUrl } from "../lib/wikipedia";
 import { findPoliticalEntity } from "../data/politicalEntities";
 import { findMapLabelContext } from "../data/mapLabelContexts";
 import { culturalWorksForPolity } from "../data/polityCulturalLinks";
 import type { PoliticalEntityKind, PoliticalRuler } from "../types";
 import type { SelectedEntity } from "./WorldMap";
+import WikipediaSummaryLink from "./WikipediaSummaryLink";
 
 const PRECISION_LABEL: Record<number, string> = {
   1: "Approximate border",
@@ -110,9 +112,13 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
         <section className="info-panel-map-record" aria-labelledby="regional-context-heading">
           <h3 id="regional-context-heading">Regional context</h3>
           <p>{context.description}</p>
-          <a href={context.sourceLink} target="_blank" rel="noreferrer">
-            {context.sourceLabel} ↗
-          </a>
+          {isWikipediaUrl(context.sourceLink) ? (
+            <WikipediaSummaryLink key={context.sourceLink} href={context.sourceLink} label={context.sourceLabel} />
+          ) : (
+            <a href={context.sourceLink} target="_blank" rel="noreferrer">
+              {context.sourceLabel} ↗
+            </a>
+          )}
         </section>
       )}
 
@@ -169,7 +175,14 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
                   <div className="cultural-work-meta">
                     {work.domain} · {work.discipline.replaceAll("-", " ")}
                   </div>
-                  {work.sourceLink ? (
+                  {work.sourceLink && isWikipediaUrl(work.sourceLink) ? (
+                    <WikipediaSummaryLink
+                      key={work.sourceLink}
+                      href={work.sourceLink}
+                      label={work.title}
+                      className="cultural-work-title"
+                    />
+                  ) : work.sourceLink ? (
                     <a href={work.sourceLink} target="_blank" rel="noreferrer" className="cultural-work-title">
                       {work.title}
                     </a>
@@ -189,13 +202,15 @@ export default function InfoPanel({ currentYear, activeSliceYear, selected, onCl
         </section>
       )}
 
-      {selected.link && (
+      {selected.link && isWikipediaUrl(selected.link) ? (
+        <WikipediaSummaryLink key={selected.link} href={selected.link} label={`Wikipedia · ${selected.name}`} />
+      ) : selected.link ? (
         <p>
           <a href={selected.link} target="_blank" rel="noreferrer">
-            More on Wikipedia →
+            Read the source →
           </a>
         </p>
-      )}
+      ) : null}
       <p className="info-panel-todo">
         {activeSliceYear === null
           ? "Showing the modern political map (no snapshot needed — the last historical-basemaps slice is 2010)."
