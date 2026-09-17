@@ -24,6 +24,16 @@ let contextualized = 0;
 let withAchievements = 0;
 let withCreation = 0;
 const profileGaps = new Map();
+const subjects = {
+  architecture: (work) => work.discipline === "architecture",
+  art: (work) => work.domain === "arts" && !["architecture", "music-performance"].includes(work.discipline),
+  music: (work) => work.discipline === "music-performance",
+  philosophy: (work) => work.domain === "philosophy",
+  stem: (work) => work.domain === "stem",
+};
+const subjectCounts = Object.fromEntries(Object.keys(subjects).map((key) => [key, { visible: 0, production: 0 }]));
+const subjectGaps = new Map();
+let allSubjects = 0;
 const available = JSON.parse(fs.readFileSync(path.join(mapDir, "index.json"), "utf8"))
   .slices.filter((slice) => slice.featureCount > 0).sort((a, b) => a.year - b.year);
 // Match the UI's held-snapshot selection, including the snapshot held at
@@ -55,6 +65,16 @@ for (const { file, snapshotYear, selectedYear: year } of auditLayers) {
     if (entity) {
       curated++;
       const works = culturalWorksForPolity(entity.id, year);
+      const missing = [];
+      for (const [subject, matches] of Object.entries(subjects)) {
+        const relevant = works.filter(({ work }) => matches(work));
+        if (relevant.length) subjectCounts[subject].visible++;
+        else missing.push(subject);
+        if (relevant.some(({ link }) => link.relationship !== "transmitted")) subjectCounts[subject].production++;
+      }
+      if (!missing.length) allSubjects++;
+      // Keep dates separate: a later achievement cannot fill an earlier gap.
+      if (missing.length) subjectGaps.set(`${entity.id}/${year}`, { id: entity.id, year, missing });
       if (works.length) withAchievements++;
       if (works.some(({ link }) => link.relationship !== "transmitted")) withCreation++;
       if (!works.length) {
@@ -86,6 +106,16 @@ console.log(`Profile occurrences without a visible cultural work: ${curated - wi
 console.log(`Historical snapshots audited: ${reachable.length}; BCE feature occurrences: ${bceOccurrences}`);
 console.log(`Modern endpoint audited: ${TIMELINE_MAX_YEAR}; modern feature occurrences: ${modernOccurrences}`);
 console.log("Context cards provide background only; they are not completed achievement curation. Counts describe map snapshot occurrences, not every year or every subject domain.");
+console.log("\nSubject coverage (feature occurrences; art includes literature):");
+for (const [subject, counts] of Object.entries(subjectCounts)) {
+  console.log(`${subject}: ${counts.visible}/${total} visible; ${counts.production}/${total} production or patronage`);
+}
+console.log(`Occurrences with all five subject categories represented: ${allSubjects}/${total}`);
+console.log("Subject gaps are research tasks, not permission to invent achievements. Even five represented categories do not prove completeness or source quality.");
+console.log("\nprofile\tyear\tmissing subjects");
+for (const gap of [...subjectGaps.values()].sort((a, b) => b.missing.length - a.missing.length || a.id.localeCompare(b.id) || a.year - b.year)) {
+  console.log(`${gap.id}\t${gap.year}\t${gap.missing.join(",")}`);
+}
 console.log("\ncount\tprofile missing visible works\tsnapshot years");
 for (const [id, entry] of [...profileGaps.entries()].sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0]))) {
   console.log(`${entry.count}\t${id}\t${[...entry.years].sort((a, b) => a - b).join(",")}`);
