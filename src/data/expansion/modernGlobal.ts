@@ -43,9 +43,9 @@ export const MODERN_GLOBAL_WORKS: CulturalWork[] = [
     yearApprox: false,
     civilizationId: "modern_europe",
     description: "Einstein's 1905 formulation recast space and time for inertial motion and introduced mass-energy equivalence in a related paper.",
-    sourceLink: "https://einsteinpapers.press.princeton.edu/",
+    sourceLink: "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
     license: "Historical scientific work; citation metadata from Einstein Papers Project",
-    dataSource: "The Collected Papers of Albert Einstein, Princeton University Press",
+    dataSource: "Nobel Foundation, Albert Einstein biography; special relativity (1905) and Swiss Patent Office career",
   },
   {
     id: "universal-declaration-human-rights",
