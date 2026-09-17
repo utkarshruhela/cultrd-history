@@ -991,9 +991,9 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     civilizationId: "china_imperial",
     description:
       "An estimated 8,000 individually detailed life-size clay soldiers, horses, and chariots buried to guard the tomb of China's first emperor, Qin Shi Huang. Discovered by farmers in 1974 and still only partially excavated.",
-    sourceLink: "https://en.wikipedia.org/wiki/Terracotta_Army",
+    sourceLink: "https://whc.unesco.org/en/list/441",
     license: "Public domain (ancient artifact)",
-    dataSource: "General archaeological consensus",
+    dataSource: "UNESCO World Heritage Centre: Mausoleum of the First Qin Emperor",
   },
 
   // --- Islamic Golden Age ---
@@ -1699,10 +1699,10 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     yearApprox: false,
     civilizationId: "china_imperial",
     description:
-      "A bronze vessel, ringed with eight dragon heads each holding a ball, designed to detect the direction of a distant earthquake by dropping a ball into a waiting toad's mouth. Zhang Heng (also an astronomer) reportedly used it to detect a quake around 400km away days before messengers confirmed it -- the earliest seismological instrument known anywhere.",
-    sourceLink: "https://en.wikipedia.org/wiki/Zhang_Heng%27s_seismoscope",
+      "An earthquake-detection instrument described around 132 CE, using dragon heads and falling balls to indicate the direction of a tremor. The original instrument does not survive: museum models reconstruct its proposed mechanism rather than preserve a working Han-period device.",
+    sourceLink: "https://collection.sciencemuseumgroup.org.uk/objects/co54055/model-of-the-zhang-heng-seismoscope-seismoscope",
     license: "Public domain (ancient device; original lost, known from textual description and modern reconstructions)",
-    dataSource: "General history-of-science consensus",
+    dataSource: "Science Museum Group collection, object 1976-107",
   },
   {
     id: "cai-lun-papermaking",
@@ -1715,10 +1715,10 @@ export const CULTURAL_WORKS: CulturalWork[] = [
     yearApprox: true,
     civilizationId: "china_imperial",
     description:
-      "A court official traditionally credited with formalizing a process for making paper from mulberry bark, hemp waste, and rags, cheap and practical enough to spread widely. Archaeological finds show cruder paper existed in China somewhat earlier; Cai Lun's contribution was refining it into a process good and standardized enough to displace bamboo strips and silk as the everyday writing material.",
-    sourceLink: "https://en.wikipedia.org/wiki/Cai_Lun",
+      "Cai Lun is recorded as presenting an improved writing paper to the Han throne in 105 CE. Archaeological paper predates his lifetime, so this milestone concerns a documented refinement and court presentation, not the invention of paper from nothing.",
+    sourceLink: "https://eprints.soas.ac.uk/43693/1/the-woman-who-invented-notepaper-towards-a-comparative-historiography-of-paper-and-print.pdf",
     license: "Public domain (ancient technology)",
-    dataSource: "General history-of-technology consensus",
+    dataSource: "The Woman Who Invented Notepaper, Journal of the Royal Asiatic Society (2011), p. 203; SOAS repository",
   },
   {
     id: "huangdi-neijing",
