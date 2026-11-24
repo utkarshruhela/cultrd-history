@@ -1341,7 +1341,7 @@ export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
   },
   {
     id: "kingdom-of-eswatini-modern-state",
-    nameAliases: ["Swaziland"],
+    nameAliases: ["Swaziland", "eSwatini"],
     kind: "kingdom",
     periodStart: 1968,
     periodEnd: 2026,
@@ -1931,7 +1931,7 @@ export const HIGH_FREQUENCY_POLITIES: PoliticalEntityProfile[] = [
   },
   {
     id: "islamic-republic-of-iran",
-    nameAliases: ["Iran"],
+    nameAliases: ["Iran", "Iran (Islamic Republic of)"],
     kind: "republic",
     periodStart: 1979,
     periodEnd: 2026,
